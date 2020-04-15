@@ -1,0 +1,4 @@
+diff a/src/app/admin/__services__/route-trips.service.ts b/src/app/admin/__services__/route-trips.service.ts	(rejected hunks)
+@@ -21 +21 @@ export class RouteTripsService {
+-  constructor(private http: HttpClient, public toastr: AlertService) { 
++  constructor(private http: HttpClient, public toastr: AlertService) {

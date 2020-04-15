@@ -1,0 +1,62 @@
+<div>
+  <div class="loader" *ngIf="isLoading === true"></div>
+  <div *ngIf="users.length === 0 && !isLoading">
+    <app-empty-page [text]='displayText'></app-empty-page>
+    <div class="bottom-image"></div>
+  </div>
+  <div *ngIf="users.length > 0">
+  <div class="buttons-wrapper flex">
+      <div class="search-section">
+        <app-search-input (keyup)="getUsersData($event.target.value)" ></app-search-input>
+   </div>
+  </div>
+    <div class="users-container">
+      <div class="users-table custom-table">
+        <mat-grid-list role="list" cols="5" rowHeight="5:1" class="table-header table-header-hover">
+          <mat-grid-tile tabindex="0">
+            <div class="users-align-cell">Name</div>
+          </mat-grid-tile>
+          <mat-grid-tile tabindex="0">Email</mat-grid-tile>
+          <mat-grid-tile tabindex="0">Homebase</mat-grid-tile>
+          <mat-grid-tile tabindex="0">Role</mat-grid-tile>
+           <mat-grid-tile tabindex="0">Actions
+            <div class="actions-icon"></div>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <ng-container *ngFor='let user of users'>
+          <mat-grid-list *ngFor="let role of user.roles" cols="5" rowHeight="6:1" class="table-row-item">
+            <div *ngIf="role.name">
+              <mat-grid-tile tabindex="0">
+                <div class="users-align-cell">{{ user.name }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="0">
+                <div class="users-align-cell">{{ user.email }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="0">
+                <div class="users-align-cell">{{ user.homebase.name }}</div>
+              </mat-grid-tile>
+                <mat-grid-tile tabindex="0">
+                <div class="users-align-cell">{{ role.name }}</div>
+              </mat-grid-tile>
+                <mat-grid-tile>
+                <div class="flex">
+                  <button aria-label="Delete" class='decline-action-button'>
+                    <span class="decline-icon tooltip" (click)="showDeleteModal(user.id)">
+                      <span class="show-on-left">Remove<i></i></span>
+                    </span>
+                  </button>
+                </div>
+              </mat-grid-tile>
+            </div>
+          </mat-grid-list>
+        </ng-container>   
+      </div>
+        <div class="pagination">
+        <app-pagination *ngIf='totalItems > pageSize' [totalItems]="totalItems" (pageChange)="setPage($event)"
+                        [pageSize]="pageSize"></app-pagination>
+      </div>
+    </div>
+      </div>
+</div>
+

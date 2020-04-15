@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/__services__/trip-request.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/admin/__services__</a> trip-request.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.44% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>68/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.62% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>11/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.47% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>17/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>56/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Observable } from 'rxjs';
+import * as moment from 'moment';
+&nbsp;
+import { environment } from 'src/environments/environment';
+import {map, retry, filter, tap} from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {createRequestOption} from 'src/app/utils/request-util';
+import {IPageMeta} from '../../shared/models/page-meta.model';
+import {TripRequest} from 'src/app/shared/models/trip-request.model';
+import {DepartmentsModel} from 'src/app/shared/models/departments.model';
+import { AlertService } from '../../shared/alert.service';
+&nbsp;
+export interface TripResponseData {
+  pageInfo: IPageMeta;
+  trips: TripRequest[];
+}
+&nbsp;
+@Injectable({ providedIn: 'root' })
+export class TripRequestService {
+&nbsp;
+  constructor(private http: HttpClient<span class="branch-1 cbranch-no" title="branch not covered" >, public toastr: </span>AlertService<span class="branch-1 cbranch-no" title="branch not covered" >) {</span>
+  }
+    tripUrl = `${environment.tembeaBackEndUrl}/api/v1/trips`;
+    private departmentsUrl = `${environment.tembeaBackEndUrl}/api/v1/departments`;
+    private providerConfirmUrl = `${environment.tembeaBackEndUrl}/api/v2/provider/confirm`;
+&nbsp;
+  static flattenDateFilter(req: any) {
+    const { dateFilters, ...result } = req;
+    let flat = {};
+    if (dateFilters) {
+      const entries = Object.entries(dateFilters).map((entry) =&gt; {
+        const [key, value] = entry;
+        const modValue = Object.entries(value).map(<span class="fstat-no" title="function not covered" >(</span>item) =&gt; <span class="cstat-no" title="statement not covered" >`${item[0]}:${item[1]}`)</span>.join(';');
+        return [key, modValue];
+      }) .filter(({1: val}) =&gt; val.length);
+      flat = entries.reduce(<span class="fstat-no" title="function not covered" >(</span>obj, { <span class="cstat-no" title="statement not covered" >0: key,</span> <span class="cstat-no" title="statement not covered" >1: val </span>}) =&gt; <span class="cstat-no" title="statement not covered" >Object.assign(obj, { [key]: val }),</span> {});
+    }
+    return { ...result, ...flat };
+  }
+&nbsp;
+  query(req?): Observable&lt;TripResponseData&gt; {
+    const reqDate = TripRequestService.flattenDateFilter(req);
+    const params = createRequestOption(reqDate);
+    return this.http.get&lt;any&gt;(`${this.tripUrl}`, { params, observe: 'response' })
+      .pipe(
+        retry(2),
+        map((res) =&gt; {
+          const { trips, pageMeta: pageInfo } = res.body.data;
+          trips.forEach((trip: TripRequest) =&gt; {
+            trip.requestedOn = moment(trip.requestedOn);
+            trip.departureTime = moment(trip.departureTime);
+          });
+          return { trips, pageInfo };
+        })
+      );
+  }
+&nbsp;
+  getDepartments(): Observable&lt;DepartmentsModel&gt; {
+    return this.http.get&lt;any&gt;(`${this.departmentsUrl}`)
+      .pipe(
+        retry(3),
+        map((res) =&gt; {
+          const { departments } = res;
+          return departments;
+        })
+      );
+  }
+&nbsp;
+  confirmRequest(tripId: number, values: any, ): Observable&lt;any&gt; {
+    const queryParam = 'confirm';
+    const { teamUrl: slackUrl } = environment;
+    const { comment, providerId } = values;
+    return this.http.put(`${this.tripUrl}/${tripId}?action=${queryParam}`, {
+      comment, slackUrl, providerId
+    })
+      .pipe(tap((data) =&gt; this.handleResponse(data, 'confirm'), this.handleError));
+  }
+&nbsp;
+  declineRequest(tripId: number, comment: string): Observable&lt;any&gt; {
+    const queryParam = 'decline';
+    const { teamUrl: slackUrl } = environment;
+    return this.http.put(`${this.tripUrl}/${tripId}?action=${queryParam}`, {
+      comment, slackUrl
+    })
+    .pipe(tap((data) =&gt; this.handleResponse(data, 'decline'), this.handleError));
+  }
+&nbsp;
+  handleError = () =&gt; {
+    this.toastr.error('Something did not work right there.');
+  }
+&nbsp;
+  handleResponse = (data, status: 'confirm' | 'decline') =&gt; {
+    if (data.success) {
+      this.toastr.success(`Trip request ${status}${status === 'confirm' ? 'ed' : 'd'}!`);
+    } else {
+      this.toastr.error(`Could not ${status} request`);
+    }
+  }
+&nbsp;
+  providerConfirm(confirmData: Object): Observable&lt;any&gt; {
+    return this.http.post&lt;any&gt;(this.providerConfirmUrl, confirmData);
+  }
+}
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

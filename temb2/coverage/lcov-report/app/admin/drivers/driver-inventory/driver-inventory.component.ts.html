@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/drivers/driver-inventory/driver-inventory.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/drivers/driver-inventory</a> driver-inventory.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>45/50</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">69.57% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>16/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>40/45</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { BaseInventoryComponent } from './../../base-inventory/base-inventory.component';
+import { IDriverModel } from './../../../shared/models/driver.model';
+import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
+import { AppEventService } from '../../../shared/app-events.service';
+import { ActivatedRoute } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { DriversInventoryService } from '../../__services__/drivers-inventory.service';
+&nbsp;
+@Component({
+  selector: 'app-drivers',
+  template: require('./driver-inventory.component.html'),
+  styles: []
+})
+export class DriverInventoryComponent extends BaseInventoryComponent implements OnInit, OnDestroy {
+  drivers: IDriverModel[] = [];
+  displayText = 'No Drivers yet';
+  createText = 'Add a Driver';
+  updateSubscription: any;
+  driversSubscription: any;
+  createSubscription: any;
+  deleteSubscription: any;
+&nbsp;
+  @Input() providerTabRequestType: string;
+  @Output() driverInfoEventEmitter = new EventEmitter();
+&nbsp;
+  constructor(
+    public driversService: DriversInventoryService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    protected appEventsService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    protected activatedRoute: ActivatedRoute<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public dialog: MatDialog<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+  ) {
+    super(appEventsService, activatedRoute, dialog);
+  }
+&nbsp;
+  ngOnInit() {
+    this.driversSubscription = this.activatedRoute.params.subscribe(
+<span class="fstat-no" title="function not covered" >      data =&gt; <span class="cstat-no" title="statement not covered" >this.updateInventory.call(this, data)</span></span>
+    );
+    this.createSubscription = this.appEventsService.subscribe(
+      'newDriver', () =&gt; this.getInventory.call(this)
+    );
+    this.deleteSubscription = this.appEventsService.subscribe(
+      'driverDeletedEvent', <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getInventory.call(this)</span>
+    );
+    this.updateSubscription = this.appEventsService.subscribe('updatedDriversEvent',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getInventory.call(this))</span>;
+  }
+&nbsp;
+  loadData(size, page, sort, providerId): void {
+    this.driversService.get(size, page, sort, providerId).subscribe(driversData =&gt; {
+      const {
+        data: {
+          data,
+          pageMeta: { totalItems }
+        }
+      } = driversData;
+      this.totalItems = totalItems;
+      this.drivers = data;
+      this.isLoading = false;
+      this.emitData(this.driverInfoEventEmitter);
+    },
+<span class="fstat-no" title="function not covered" >      () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.isLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.displayText = `Oops! We're having connection problems.`;</span>
+      });
+  }
+&nbsp;
+  ngOnDestroy(): void {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.deleteSubscription) {
+      this.deleteSubscription.unsubscribe();
+    }
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.createSubscription) {
+      this.createSubscription.unsubscribe();
+    }
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.updateSubscription) {
+      this.updateSubscription.unsubscribe();
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

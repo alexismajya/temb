@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/app.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">app</a> app.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.66% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>26/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.46% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>23/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Observable, fromEvent, Subscription } from 'rxjs';
+import { SwPush } from '@angular/service-worker';
+import { AlertService } from './shared/alert.service';
+import { GoogleAnalyticsService } from './admin/__services__/google-analytics.service';
+import { SocketioService } from './shared/socketio.service';
+import notificationHelper from './utils/notificationHelper';
+import { AuthService } from './auth/__services__/auth.service';
+import { environment } from 'src/environments/environment';
+&nbsp;
+@Component({
+  selector: 'app-root',
+  template: require('./app.component.html'),
+  styles: [
+    `
+      div {
+        height: 100%;
+        width: 100%;
+      }
+    `
+  ]
+})
+export class AppComponent implements OnInit, OnDestroy {
+  offlineEvent: Observable&lt;Event&gt;;
+  offlineSubscription: Subscription;
+&nbsp;
+  constructor(
+    private toastr: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private analytics: GoogleAnalyticsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private socketService: SocketioService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private swPush: SwPush<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private authService: AuthService<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  ) {}
+&nbsp;
+  ngOnInit(): void {
+    this.offlineEvent = fromEvent(window, 'offline');
+&nbsp;
+    this.offlineSubscription = this.offlineEvent.subscribe(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.toastr.error('You seem to be offline.');</span>
+    });
+&nbsp;
+    this.analytics.init();
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.swPush.isEnabled) {
+<span class="cstat-no" title="statement not covered" >      this.swPush</span>
+      .requestSubscription({
+        serverPublicKey: environment.VAPID_PUBLIC_KEY
+      });
+      // tslint:disable-next-line: no-unused-expression
+<span class="cstat-no" title="statement not covered" >      new notificationHelper(this.socketService, this.swPush, this.authService);</span>
+    }
+  }
+&nbsp;
+  ngOnDestroy(): void {
+    this.offlineSubscription.unsubscribe();
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

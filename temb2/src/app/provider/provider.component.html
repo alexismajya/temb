@@ -1,0 +1,72 @@
+<div *ngIf="!succeeded" class="provider-confirm">
+  <img src="/assets/logo.svg" class="logo-img" title="logo" alt="logo" />
+  <h1>Cab and Driver Assignment</h1>
+  <form [formGroup]="tripConfirmationForm" (ngSubmit)="onSubmit()">
+    <div class="label-input-wrapper">
+      <label for="driverName">Driver Name</label>
+      <input [class.is-invalid]="driverName.invalid && driverName.touched"
+        formControlName="driverName" id="driverName" type="text" class="plate-input" />
+      <div *ngIf="driverName.invalid && driverName.touched">
+        <small *ngIf="driverName.errors?.required" class="text-danger">Driver name is required</small>
+        <small *ngIf="driverName.errors?.minlength" class="text-danger">Driver name must be at least 3 characters</small>
+        <small *ngIf="driverName.errors?.maxlength" class="text-danger">Driver name must not be greater than 25 characters</small>
+      </div>
+    </div>
+    <div class="label-input-wrapper">
+      <label for="driverPhoneNo">Driver Phone Number</label>
+      <input [class.is-invalid]="driverPhoneNo.invalid && driverPhoneNo.touched"
+        formControlName="driverPhoneNo" id="driverPhoneNo" type="text" class="plate-input" placeholder="Eg: +250785000000"/>
+      <div *ngIf="driverPhoneNo.invalid && driverPhoneNo.touched">
+        <small *ngIf="driverPhoneNo.errors?.required" class="text-danger">Driver phone number is required</small>
+        <small *ngIf="driverPhoneNo.errors?.pattern" class="text-danger">Invalid phone number</small>
+      </div>
+    </div>
+    <div class="label-input-wrapper">
+      <label for="vehicleModel">Vehicle Model</label>
+      <input [class.is-invalid]="vehicleModel.invalid && vehicleModel.touched"
+        formControlName="vehicleModel" id="vehicleModel" type="text" class="plate-input" />
+      <div *ngIf="vehicleModel.invalid && vehicleModel.touched">
+        <small *ngIf="vehicleModel.errors?.required" class="text-danger">Vehicle model is required</small>
+        <small *ngIf="vehicleModel.errors?.minlength" class="text-danger">Vehicle model must be at least 3 characters</small>
+        <small *ngIf="vehicleModel.errors?.maxlength" class="text-danger">Vehicle model must not be greater than 50 characters</small>
+      </div>
+    </div>
+    <div class="label-input-wrapper">
+      <label for="vehicleRegNo">Vehicle Reg No</label>
+      <input [class.is-invalid]="vehicleRegNo.invalid && vehicleRegNo.touched" 
+        formControlName="vehicleRegNo" id="vehicleRegNo" type="text" class="plate-input" />
+      <div *ngIf="vehicleRegNo.invalid && vehicleRegNo.touched">
+        <small *ngIf="vehicleRegNo.errors?.required" class="text-danger">Vehicle Reg No is required</small>
+        <small *ngIf="vehicleRegNo.errors?.minlength" class="text-danger">Vehicle Reg No must be at least 4 characters</small>
+        <small *ngIf="vehicleRegNo.errors?.maxlength" class="text-danger">Vehicle Reg No must not be greater than 50 characters</small>
+      </div>
+    </div>
+    <div class="label-input-wrapper">
+      <label for="vehicleColor">Vehicle Color</label>
+      <input [class.is-invalid]="vehicleColor.invalid && vehicleColor.touched" 
+        formControlName="vehicleColor" id="vehicleColor" type="text" class="plate-input" />
+      <div *ngIf="vehicleColor.invalid && vehicleColor.touched">
+        <small *ngIf="vehicleColor.errors?.required" class="text-danger">Vehicle color is required</small>
+        <small *ngIf="vehicleColor.errors?.minlength" class="text-danger">Vehicle color must be at least 4 characters</small>
+        <small *ngIf="vehicleColor.errors?.maxlength" class="text-danger">Vehicle color must not be greater than 50 characters</small>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button [disabled]='!tripConfirmationForm.valid' type="submit" name="submit">Confirm Trip</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="succeeded" class="flexbox-parent">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" style="height: 60vh;">
+    <div fxLayoutAlign="center" fxFlex="100%">
+      <img src="/assets/combined-shape.svg" class="logo-verify" title="logo" alt="logo" />
+    </div>
+    <div class="alert alert-success">
+      <h2 class="md-display-1">Success</h2>
+      <div>
+        Your have successfully assigned a Cab and a Driver to the trip.
+      </div>
+    </div>
+  </div>
+</div>

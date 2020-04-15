@@ -1,0 +1,79 @@
+<div class="user-role-modal">
+  <div class="modal-header">
+    <button class="close-button button-hover" (click)="closeDialog()">
+      &#x2715;
+    </button>
+  </div>
+  <div class="form-container">
+    <form #addForm="ngForm" (ngSubmit)="assignUserRole(addForm.value)">
+      <span class="modal-title">Assign Role To User</span>
+
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="email">User's Email</label>
+            <input
+              required
+              id="email"
+              name="email"
+              placeholder="john.doe@company.com"
+              [(ngModel)]="roles.email"
+              type="email"
+              email
+              pattern="\S+@\S+\.\S+"
+              [class.is_invalid]="email.invalid && email.touched"
+              #email="ngModel"/>
+              <div *ngIf="email.errors && (email.touched && email.invalid)">
+              <small class="text-danger" *ngIf="email?.errors.required">email field is required</small>
+              <small class="text-danger" *ngIf="email?.errors.email">email is invalid</small>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="userRoles">Role Name:</label>
+            <mat-select
+              class="roles-dropdown"
+              [(ngModel)]="roles.name" name="roleName"
+              required placeholder="Select Role">
+              <mat-option *ngFor="let options of userRoles"
+                [value]="options.name"
+                [title]="options.name">
+                {{ options.name }}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="homebases">Homebase:</label>
+            <mat-select
+              class="homebases-dropdown"
+              [(ngModel)]="homebases.homebaseId" name="homebaseId"
+              required placeholder="Select Homebase">
+              <mat-option *ngFor="let options of homebases"
+                [value]="options.id"
+                [title]="options.homebaseName">
+                {{ options.homebaseName }}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="loading || addForm.invalid">
+        <i *ngIf="isLoading" class="fa fa-circle-o-notch fa-spin"></i>
+        &nbsp;
+        <span>Submit</span>
+      </button>
+    </form>
+  </div>
+</div>

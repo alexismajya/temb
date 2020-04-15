@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const responseData = {
+    id: '213',
+    tripStatus: 'trip',
+    requester: {
+        slackId: '2124AQ'
+    },
+    pickup: 'pick',
+    departureDate: 'date',
+    rider: {
+        slackId: '2124A'
+    },
+    destination: 'dest',
+    department: { teamId: 'teamId', head: { slackId: 1 } },
+    departmentId: 3,
+    origin: {},
+    noOfPassengers: 'noPa',
+    managerComment: 'manager',
+    cab: { providerId: 1, model: 'jeep' },
+    driver: { driverName: 'James', driverPhoneNo: '708989098' },
+    provider: { name: 'Leticia' },
+    homebase: {
+        channel: '123ER'
+    }
+};
+exports.default = responseData;
+//# sourceMappingURL=NotificationResponseMock.js.map

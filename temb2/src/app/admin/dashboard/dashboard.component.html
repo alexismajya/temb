@@ -1,0 +1,102 @@
+<div class="dashboard__main-container">
+  <div class="trip-header">
+    <div class="trip-title">
+      <h3 class="routes-title">TRIPS OVERVIEW</h3>
+    </div>
+    <div fxLayoutGap="13.5px" fxLayout.lt-sm="column wrap" class="date-picker">
+      <app-date-picker
+        (selectedDateChange)="setDateFilter('startDate', $event)"
+        [initialDate]="startInitialDate"
+        [maxDate]="startDateMax">
+      </app-date-picker>
+
+      <app-date-picker
+        (selectedDateChange)="setDateFilter('endDate', $event)"
+        [initialDate]="endInitialDate"
+        [minDate]="minDate"
+        [maxDate]="endDateMax">
+      </app-date-picker>
+    </div>
+  </div>
+  <div fxLayout="column">
+    <div class="dashboard-top-container">
+      <div class="left-pane">
+        <app-trip-pie-chart
+          [normalTripCount]="normalTripCount"
+          [travelTripCount]="travelTripCount">
+        </app-trip-pie-chart>
+        <div class="trip-analytics">
+          <app-average-trip-ratings [avgRatings]="averageRatings"></app-average-trip-ratings>
+          <app-total-cost-view [totalCost]="totalCost"></app-total-cost-view>
+        </div>
+      </div>
+      <div class="right-pane">
+        <app-trip-bar-chart
+            [labels]="departments"
+            [data]="tripData.trip"
+            [dept]="tripData.departmentNames"
+            [tripCost]="tripData.tripsCost"
+            ></app-trip-bar-chart>
+      </div>
+    </div>
+    <div class="dashboard-middle-container">
+      <div fxLayout="column">
+        <div>
+          <h3 class="routes-title">TRAVEL OVERVIEW</h3>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutGap="5px">
+        <div class="airport-transfers">
+          <app-travel-analytics-view
+            [rating]="airportRatings"
+            [totalCount]="totalAirportTrips"
+            title="Airport Transfers">
+          </app-travel-analytics-view>
+          <app-travel-analytics-view
+            [rating]="averageEmbassyRatings"
+            [totalCount]="EmbassyVisits"
+            title="Embassy Visits">
+          </app-travel-analytics-view>
+        </div>
+        <app-trips-line-chart
+          [chartLabels]="tripsDataSet.labels"
+          [chartData]="tripsDataSet.travel">
+        </app-trips-line-chart>
+      </div>
+    </div>
+    <div class="background">
+      <div fxLayout="column wrap" fxLayoutGap="5px" fxLayoutAlign="start start" class="card-position">
+        <div>
+          <h3 class="routes-title">ROUTES OVERVIEW</h3>
+        </div>
+        <div class="most-ratings-usage" >
+          <div fxLayout="row" fxLayout.xs="column"  fxLayoutAlign="center" *ngIf="mostUsedRoute">
+            <app-routes-overview usage="Most" [data]="mostUsedRoute"></app-routes-overview>
+            <app-route-ratings-overview
+              [title]="'Most Rated Routes'"
+              [ratings]="mostRatedRoutes">
+            </app-route-ratings-overview>
+            <app-rider-list class="card-position"
+              title="Most Frequent Riders"
+              [riders$]="mostFrequentRiders">
+            </app-rider-list>
+          </div>
+        </div>
+
+        <div>
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center" *ngIf="leastUsedRoute">
+            <app-routes-overview usage="Least" [data]="leastUsedRoute"></app-routes-overview>
+            <app-route-ratings-overview
+              [title]="'Least Rated Routes'"
+              [ratings]="leastRatedRoutes">
+            </app-route-ratings-overview>
+            <app-rider-list class="card-position"
+              [riders$]="leastFrequentRiders"
+              title="Least Frequent Riders">
+            </app-rider-list>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

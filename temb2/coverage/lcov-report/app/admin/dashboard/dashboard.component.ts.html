@@ -1,0 +1,881 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/dashboard/dashboard.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/admin/dashboard</a> dashboard.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">99.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>187/188</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.42% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>32/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>35/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>155/155</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">168x</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
+import * as moment from 'moment';
+import { RouteUsageService } from '../__services__/route-usage.service';
+import { RouteRatingsService } from '../__services__/route-ratings.service';
+import { TripsDataService } from '../__services__/trips-data.service';
+import { ITripsDataModel } from '../../shared/models/trips-data.model';
+import { RiderService } from './rider-list/rider.service';
+import { DepartmentsService } from '../__services__/departments.service';
+import { HomeBaseManager } from '../../shared/homebase.manager';
+import { getStartAndEndDate } from '../../utils/helpers';
+import { getRiderList } from 'src/app/utils/helpers';
+import { IRouteUsageModel } from 'src/app/shared/models/route-ratings.model';
+&nbsp;
+@Component({
+  selector: 'app-dashboard',
+  template: require('./dashboard.component.html'),
+  styles: [],
+})
+export class DashboardComponent implements OnInit {
+  dateFilters = null;
+  mostUsedRoute: IRouteUsageModel;
+  leastUsedRoute: IRouteUsageModel;
+  mostRatedRoutes = [];
+  leastRatedRoutes = [];
+  maxDate: string | Date = new Date();
+  averageRatings = 0;
+  minDate: any;
+  startingDate: any;
+  tripsData: Array&lt;ITripsDataModel&gt; = [];
+  totalCost: number;
+  airportRatings: number;
+  totalAirportTrips: number;
+  averageEmbassyRatings: any;
+  EmbassyVisits: number;
+  normalTripCount: number;
+  travelTripCount: number;
+  departments: string[] = [];
+  numOfTrips: Array&lt;number&gt; = [];
+  departmentNames: Array&lt;string&gt; = [];
+  totalCostPerDept: any[];
+  tripsDataSet: { labels: string[], travel: any[] } = {
+    labels: [],
+    travel: [
+      {
+        data: [],
+        label: 'Airport Transfers',
+        tripsCost: [],
+      },
+      {
+        data: [],
+        label: 'Embassy Visits',
+        tripsCost: [],
+      }, ],
+  };
+  tripData: { trip: any[], tripsCost: number[], departmentNames: string[] } = {
+    trip: [
+      { label: 'Line Dataset', data: [], type: 'line' },
+      { data: [], label: 'Trips', type: 'bar' },
+    ],
+    tripsCost: [],
+    departmentNames: []
+  };
+  homebaseId: string;
+  startInitialDate: string;
+  endInitialDate: string;
+  startDateMax: string;
+  endDateMax: string;
+  mostFrequentRiders = [];
+  leastFrequentRiders = [];
+  filter1: { startDate: { from: any; }; endDate: { to: any; }; };
+  filter2: { from: { startDate: any; }; to: { endDate: any; }; };
+&nbsp;
+  constructor(
+    private routeUsageService: RouteUsageService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private ratingsService: RouteRatingsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private tripService: TripsDataService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private riderService: RiderService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private departmentsService: DepartmentsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private readonly hbManager: HomeBaseManager<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  ) { }
+&nbsp;
+  ngOnInit() {
+    const [startDate, endDate] = getStartAndEndDate();
+    this.dateFilters = { startDate, endDate };
+    this.startInitialDate = startDate;
+    this.endInitialDate = endDate;
+    this.startDateMax = moment().format('YYYY-MM-DD');
+    this.endDateMax = moment().format('YYYY-MM-DD');
+    this.homebaseId = this.hbManager.getHomebaseId();
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.dateFilters) {
+      this.loadComponents();
+    }
+  }
+&nbsp;
+  setDateFilter(field: string, date: string) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (field === 'startDate') {
+      this.minDate = date;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (moment(date).diff(moment(this.dateFilters.endDate), 'days') &gt; 0) { <span class="cstat-no" title="statement not covered" >return; </span>}
+    }
+    this.dateFilters[field] = moment(date).format('YYYY-MM-DD');
+    this.loadComponents();
+  }
+&nbsp;
+  updateDateFilters() {
+    this.filter1 = {
+      startDate: { from: this.dateFilters.startDate },
+      endDate: { to: this.dateFilters.endDate },
+    };
+&nbsp;
+    this.filter2 = {
+      from: { startDate: this.dateFilters.startDate },
+      to: { endDate: this.dateFilters.endDate },
+    };
+  }
+&nbsp;
+  loadComponents() {
+    this.updateDateFilters();
+    this.getRoutesUsage();
+    this.getRouteRatings();
+    this.getTripsData();
+    this.getAirportTransfers();
+    this.getEmbassyVisits();
+    this.getTripsAnalysis();
+    this.getFrequentRiders();
+    this.getDepartments();
+  }
+&nbsp;
+  getRoutesUsage() {
+    this.routeUsageService.getRouteUsage(this.filter2).subscribe(routeUsageData =&gt; {
+      const { mostUsedBatch, leastUsedBatch } = routeUsageData;
+      this.mostUsedRoute = mostUsedBatch;
+      this.leastUsedRoute = leastUsedBatch;
+    });
+  }
+&nbsp;
+  getRouteRatings() {
+    this.ratingsService.getRouteAverages(this.filter1).subscribe(res =&gt; {
+      const { data } = res;
+      this.mostRatedRoutes = data.slice(0, 3);
+      this.leastRatedRoutes = data.sort((a, b) =&gt; a.Average - b.Average).slice(0, 3);
+    });
+  }
+&nbsp;
+  callTripService(tripType = '') {
+    return this.tripService.getTripData(this.filter1, tripType);
+  }
+&nbsp;
+  totalTripsCount(tripsData: Array&lt;ITripsDataModel&gt;): number {
+    const totalVisits = tripsData.reduce((prev, next) =&gt; prev + Number(next.totalTrips), 0);
+    return totalVisits;
+  }
+&nbsp;
+  getTripsData() {
+    this.callTripService().subscribe(res =&gt; {
+      const { data: { trips, finalCost, finalAverageRating, count } } = res;
+      this.tripsData = trips;
+      this.totalCost = finalCost || <span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+      this.averageRatings = finalAverageRating * 20; // convert to percentage then divide by 5 for the 5 stars
+      this.plotBarChart(trips);
+    });
+  }
+&nbsp;
+  getAirportTransfers() {
+    this.callTripService('Airport Transfer').subscribe(res =&gt; {
+      const { data: { finalAverageRating, trips } } = res;
+      this.airportRatings = finalAverageRating * 20; // convert to percentage then divide by 5 for the 5 stars
+      this.totalAirportTrips = this.totalTripsCount(trips);
+      this.plotTravelTripsAnalytics(trips, 0);
+    });
+  }
+&nbsp;
+  getEmbassyVisits() {
+    this.tripService.getTripData(this.filter1, 'Embassy Visit').subscribe(res =&gt; {
+      const { data: { trips, finalAverageRating } } = res;
+      this.averageEmbassyRatings = finalAverageRating * 20; // convert to percentage then divide by 5 for the 5 stars
+      this.EmbassyVisits = this.totalTripsCount(trips);
+      this.plotTravelTripsAnalytics(trips, 1);
+    });
+  }
+&nbsp;
+  getTripsAnalysis() {
+    this.tripService.getTravelData(this.filter1).subscribe(res =&gt; {
+      const { data: { trips } } = res;
+      this.travelTripCount = this.totalTripsCount(trips);
+    });
+    this.tripService.getTripData(this.filter1, 'Regular Trip').subscribe(res =&gt; {
+      const { data: { trips } } = res;
+      this.normalTripCount = this.totalTripsCount(trips);
+    });
+  }
+&nbsp;
+  getDepartments() {
+    this.departmentsService.get(5, 1).subscribe(res =&gt; {
+      const weekOfMonth = this.getWeekOfMonth(this.dateFilters.startDate);
+      const departments = res.departments.map(department =&gt; department.name);
+&nbsp;
+      this.tripsDataSet.labels = [weekOfMonth, ...departments];
+      this.tripData.departmentNames = [...departments];
+&nbsp;
+      this.tripsDataSet.travel[0].data[0] = 0;
+      this.tripsDataSet.travel[0].tripsCost[0] = 0;
+      this.tripsDataSet.travel[1].data[0] = 0;
+      this.tripsDataSet.travel[1].tripsCost[0] = 0;
+    });
+  }
+&nbsp;
+  getWeekOfMonth(date: string) {
+    const selectedDate = moment(date);
+    const weekOfMonth = `Week ${Math.ceil(selectedDate.date() / 7)}`;
+    return weekOfMonth;
+  }
+&nbsp;
+  plotTravelTripsAnalytics(trips, dataIndex: number) {
+    const onlyUnique = (value, index, self) =&gt; self.indexOf(value) === index;
+    let labels = [...this.tripsDataSet.labels];
+    trips.map(trip =&gt; {
+      if (labels.indexOf(trip.departmentName) === -1) {
+        this.departments.push(trip.departmentName);
+        const [weekOfMonth, ...dataLabels] = labels;
+        labels = [weekOfMonth, ...this.departments, ...dataLabels].filter(onlyUnique);
+      }
+&nbsp;
+      const index = labels.indexOf(trip.departmentName);
+      const newTravelData = [...this.tripsDataSet.travel[dataIndex].data];
+      const newTravelCost = [...this.tripsDataSet.travel[dataIndex].tripsCost];
+&nbsp;
+      newTravelData[index] = parseInt(trip.totalTrips, 0);
+      newTravelCost[index] = parseInt(trip.totalCost || <span class="branch-1 cbranch-no" title="branch not covered" >0,</span> 0);
+      this.tripsDataSet.travel[dataIndex].data = [...newTravelData];
+      this.tripsDataSet.travel[dataIndex].tripsCost = [...newTravelCost];
+    });
+&nbsp;
+    if (labels.length &gt; 6) {
+      labels.length = 6;
+    }
+    this.tripsDataSet.labels = labels;
+  }
+&nbsp;
+  plotBarChart(tripData): any {
+    const newTotalCost = [];
+    const newTotalTrip = [];
+&nbsp;
+    const onlyUnique = (value, index, self) =&gt; self.indexOf(value) === index;
+&nbsp;
+    let labels = [...this.tripData.departmentNames];
+    tripData.map(tripInfo =&gt; {
+      if (labels.indexOf(tripInfo.departmentName) === -1) {
+        this.departments.push(tripInfo.departmentName);
+        const [...dataLabels] = labels;
+        labels = [...this.departments, ...dataLabels].filter(onlyUnique);
+      }
+      newTotalCost.push(+tripInfo.totalCost);
+      newTotalTrip.push(+tripInfo.totalTrips);
+    });
+&nbsp;
+    this.tripData.trip[1].data = newTotalTrip;
+    this.tripData.tripsCost = this.tripData.trip[0].data = newTotalCost;
+&nbsp;
+    if (labels.length &gt; 5) {
+      labels.length = 5;
+    }
+    this.tripData.departmentNames = labels;
+  }
+&nbsp;
+  getFrequentRiders() {
+    this.riderService.getRiders(this.filter1).subscribe(res =&gt; {
+      const { firstFiveMostFrequentRiders, leastFiveFrequentRiders } = res.data;
+      this.mostFrequentRiders = getRiderList(firstFiveMostFrequentRiders);
+      this.leastFrequentRiders = getRiderList(leastFiveFrequentRiders);
+    });
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

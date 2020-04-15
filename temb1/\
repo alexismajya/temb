@@ -1,0 +1,16 @@
+TEM-588-task: fix staging deployment
+
+- fixed src/modules/report/__tests__/GenerateData.test.ts
+- fixed src/modules/report/GenerateExcelBook.ts
+
+[Finishes TEM-588]
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch task/TEM-588-fix-staging-deployment
+# Changes to be committed:
+#	modified:   .eslintrc.json
+#	modified:   src/modules/report/GenerateExcelBook.ts
+#	modified:   src/modules/report/__tests__/GenerateData.test.ts
+#

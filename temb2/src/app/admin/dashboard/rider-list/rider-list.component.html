@@ -1,0 +1,7 @@
+<div class="riders">
+  <p class="riders--heading">{{title}}</p>
+  <div class="riders__list" fxLayout="row wrap"
+      fxLayoutAlign="space-between none">
+      <app-rider-card *ngFor="let rider of riders$" [rider]="rider" ></app-rider-card>
+  </div>
+</div>

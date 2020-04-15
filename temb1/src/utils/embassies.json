@@ -1,0 +1,405 @@
+{
+  "Nigeria": [
+    {
+      "name": "French Embassy",
+      "coordinates": { "longitude": 6.443677, "latitude": 3.431105 },
+      "address": "Ikoyi/Lagos/Nigeria"
+    },
+    {
+      "name": "Embassy of spain",
+      "coordinates": { "longitude": 6.435515, "latitude": 3.416962 },
+      "address": "Kofo Abayomi St, Eti-Osa, Lagos, Nigeria"
+    },
+    {
+      "name": "United States Consulate General Victoria Island Lagos",
+      "coordinates": { "longitude": 6.440597, "latitude": 3.406723 },
+      "address": "2 Walter Carrington Cres, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Embassy of Egypt",
+      "coordinates": { "longitude": 6.450124, "latitude": 3.410448 },
+      "address": "Embassy of Egypt lagos"
+    },
+    {
+      "name": "Consulate General of Germany",
+      "coordinates": { "longitude": 6.439564, "latitude": 3.405821 },
+      "address": "15 Walter Carrington Cres, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "British Deputy High Commission",
+      "coordinates": { "longitude": 6.438409, "latitude": 3.407417 },
+      "address": "11 Walter Carrington Cres, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "German Embassy",
+      "coordinates": { "longitude": 6.439558, "latitude": 3.405821 },
+      "address": "12 Walter Carrington Cres, Victoria Island, Lagos, Nigeria, German Embassy"
+    },
+    {
+      "name": "Libanese embassy",
+      "coordinates": { "longitude": 6.439156, "latitude": 3.408548 },
+      "address": "Eleke Cres, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Consulate general of Italy",
+      "coordinates": { "longitude": 6.440424, "latitude": 3.408903 },
+      "address": "12 Walter Carrington Cres, Victoria Island, Lagos, Nigeria, Consulate general of Italy"
+    },
+    {
+      "name": "Indian High Commission",
+      "coordinates": { "longitude": 6.439096, "latitude": 3.410359 },
+      "address": "8A, WALTER CARRINGTON CRESCENT, PMB 80128, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Japanese embassy",
+      "coordinates": { "longitude": 6.437692, "latitude": 3.410149 },
+      "address": "Apese Street, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Consulate of China",
+      "coordinates": { "longitude": 6.430075, "latitude": 3.411723 },
+      "address": "161A Idejo St, Victoria Island 23401, Lagos, Nigeria"
+    },
+    {
+      "name": "Embassy of the Netherlands",
+      "coordinates": { "longitude": 6.440272, "latitude": 3.406193 },
+      "address": "14a Walter Carrington Cres, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Ghana high commission",
+      "coordinates": { "longitude": 6.446638, "latitude": 3.405744 },
+      "address": "15 Macarthy Street, Onikan Environ, Lagos, Nigeria"
+    },
+    {
+      "name": "Bulgarian Embassy",
+      "coordinates": { "longitude": 6.440824, "latitude": 3.407485 },
+      "address": "18 Walter Carrington Cres, Eti-Osa, Lagos, Nigeria"
+    },
+    {
+      "name": "Embassy of Sweden",
+      "coordinates": { "longitude": 9.030055, "latitude": 7.520703 },
+      "address": "41 T. Y. Danjuma St, Asokoro, Abuja, Nigeria"
+    },
+    {
+      "name": "South Africa Visa Application Centre",
+      "coordinates": { "longitude": 6.435575, "latitude": 3.481373 },
+      "address": "3rd Floor, Sterling Bank Plaza, Plot 1083 Mohammadu Buhari Way, Central Business District, Abuja, Nigeria"
+    },
+    {
+      "name": "Consulate General of Brazil",
+      "coordinates": { "longitude": 6.433865, "latitude": 3.42297 },
+      "address": "257 Kofo Abayomi St, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Honorary Consulate-General of the Republic of Singapore",
+      "coordinates": { "longitude": 6.429468, "latitude": 3.436527 },
+      "address": "81-A Younis Bashorun Street, Victoria Island, Lagos, Nigeria"
+    },
+    {
+      "name": "Korean embassy",
+      "coordinates": { "longitude": 6.459593, "latitude": 3.448569 },
+      "address": "Layi Ajayi-Bembe Rd, Ikoyi 101233, Lagos, Nigeria"
+    },
+    {
+      "name": "Consulate General of Denmark",
+      "coordinates": { "longitude": 6.448144, "latitude": 3.439664 },
+      "address": "15 (formerly Probyn Road, Onisiwo Rd, Lagos, Nigeria"
+    }
+  ],
+  "Kenya": [
+    {
+      "name": "Embassy of Switzerland",
+      "coordinates": { "longitude": -1.228422, "latitude": 36.80089 },
+      "address": "Rosslyn Green Estate Rosslyn Green Drive, off Red Hill Road Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Sweden",
+      "coordinates": { "longitude": -1.232989, "latitude": 36.805098 },
+      "address": "United Nations Cres, Nairobi, Kenya, Embassy of Sweden"
+    },
+    {
+      "name": "U.S. Embassy",
+      "coordinates": { "longitude": -1.234378, "latitude": 36.810495 },
+      "address": "United Nations Ave, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Brazil",
+      "coordinates": { "longitude": -1.231663, "latitude": 36.809205 },
+      "address": "121, U.N. Crescent Rd., U.N. Close,, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Senegal",
+      "coordinates": { "longitude": -1.229771, "latitude": 36.812363 },
+      "address": "192, gigiri close United Nations Cres, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Italy",
+      "coordinates": { "longitude": -1.236181, "latitude": 36.810127 },
+      "address": "United Nations Cres, Nairobi, Kenya, Embassy of Italy"
+    },
+    {
+      "name": "Embassy of Turkey",
+      "coordinates": { "longitude": -1.237709, "latitude": 36.8069 },
+      "address": "Gigiri Rd, Nairobi, Kenya"
+    },
+    {
+      "name": "Royal Norwegian Embassy",
+      "coordinates": { "longitude": -1.234518, "latitude": 36.802399 },
+      "address": "No.58 Red Hill Rd, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Norway",
+      "coordinates": { "longitude": -1.234747, "latitude": 36.80236 },
+      "address": "58 Red Hill Rd, Nairobi City, Kenya, Embassy of Norway"
+    },
+    {
+      "name": "Embassy of Poland",
+      "coordinates": { "longitude": -1.234967, "latitude": 36.803137 },
+      "address": "58 Red Hill Rd, Nairobi City, Kenya, Embassy of Poland"
+    },
+    {
+      "name": "Rwandan High Commission",
+      "coordinates": { "longitude": -1.240328, "latitude": 36.81217 },
+      "address": "Limuru Rd, Nairobi, Kenya, Rwandan High Commission"
+    },
+    {
+      "name": "Canadian High Commission",
+      "coordinates": { "longitude": -1.241799, "latitude": 36.813042 },
+      "address": "Limuru Rd, Nairobi, Kenya, Canadian High Commission"
+    },
+    {
+      "name": "Embassy of Belgium",
+      "coordinates": { "longitude": -1.248104, "latitude": 36.815036 },
+      "address": "Limuru Rd, Nairobi, Kenya, Embassy of Belgium"
+    },
+    {
+      "name": "Embassy of France",
+      "coordinates": { "longitude": -1.249899, "latitude": 36.802605 },
+      "address": "Peponi Gardens, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Ukraine in Kenya",
+      "coordinates": { "longitude": -1.251695, "latitude": 36.81888 },
+      "address": "674 Limuru Rd, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Austria",
+      "coordinates": { "longitude": -1.249367, "latitude": 36.820766 },
+      "address": "P.O. Box 30560, 357 Limuru Road, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Germany",
+      "coordinates": { "longitude": -1.268969, "latitude": 36.784136 },
+      "address": "P.O. Box 30180,Riverside Drive Gate 113 Riverside Paddocks, Nairobi, Kenya"
+    },
+    {
+      "name": "Danish Embassy Royal",
+      "coordinates": { "longitude": -1.217878, "latitude": 36.814293 },
+      "address": "13 Runda Drive, Nairobi, Kenya"
+    },
+    {
+      "name": "Embassy of Republic of Angola",
+      "coordinates": { "longitude": -1.230889, "latitude": 36.798 },
+      "address": "Nairobi, Kenya, Embassy of Republic of Angola"
+    },
+    {
+      "name": "High Commission of Ghana in Kenya",
+      "coordinates": { "longitude": -1.25146, "latitude": 36.81695 },
+      "address": "Embassy of Republic of Angola, Nairobi, Kenya"
+    },
+    {
+      "name": "Ugandan Embassy in Nairobi",
+      "coordinates": { "longitude": -1.26962, "latitude": 36.793323 },
+      "address": "Ugandan Embassy in Nairobi, Nairobi, Kenya"
+    },
+    {
+      "name": "Tanzanian High Commission",
+      "coordinates": { "longitude": -1.287299, "latitude": 36.824778 },
+      "address": "Reinsurance Plaza 9th Floor,, Taifa Rd, Nairobi City, Kenya"
+    }
+  ],
+  "Uganda": [
+    {
+      "name": "Embassy of China",
+      "coordinates": { "longitude": 0.336808, "latitude": 32.594258 },
+      "address": "37, MALCOLM X AVENUE, KOLOLO, KAMPALA, UGANDA"
+    },
+    {
+      "name": "British High Commission Kampala",
+      "coordinates": { "longitude": 0.336479, "latitude": 32.584334 },
+      "address": "Plot 4, Kampala, Uganda"
+    },
+    {
+      "name": "Embassy of Algeria",
+      "coordinates": { "longitude": 0.334176, "latitude": 32.58795 },
+      "address": "P.o.Box 4025, Kampala John Babiha (Acacia) Ave, Kampala, Uganda"
+    },
+    {
+      "name": "Embassy of Libya",
+      "coordinates": { "longitude": 0.334276, "latitude": 32.593538 },
+      "address": "Embassy of Libya, Kampala, Uganda"
+    },
+    {
+      "name": "Embassy of North Korea",
+      "coordinates": { "longitude": 0.333704, "latitude": 32.597295 },
+      "address": "17 Prince Charles Dr, Kampala, Uganda"
+    },
+    {
+      "name": "Embassy of Burundi",
+      "coordinates": { "longitude": 0.327911, "latitude": 32.597776 },
+      "address": "P.O.Box 29214 Kintu Road, Kampala, Uganda"
+    },
+    {
+      "name": "Indian High Commission",
+      "coordinates": { "longitude": 0.329448, "latitude": 32.579426 },
+      "address": "11 Kyaddondo Rd, Kampala, Uganda"
+    },
+    {
+      "name": "Nigerian High Commission",
+      "coordinates": { "longitude": 0.325614, "latitude": 32.57708 },
+      "address": "33 Nakasero Rd, Kampala, Uganda"
+    },
+    {
+      "name": "Rwandese Embassy",
+      "coordinates": { "longitude": 0.335536, "latitude": 32.581291 },
+      "address": "Rwandese Embassy, Kampala, Uganda"
+    },
+    {
+      "name": "Kenyan High Commission",
+      "coordinates": { "longitude": 0.326983, "latitude": 32.577132 },
+      "address": "Plot 41 / P.O Box 5220 Nakasero Rd, Kampala, Uganda"
+    },
+    {
+      "name": "Embassy of France",
+      "coordinates": { "longitude": 0.319816, "latitude": 32.577026 },
+      "address": "16 Lumumba Ave, Kampala, Uganda"
+    }
+  ],
+  "Rwanda": [
+    {
+      "name": "Embassy of the United States",
+      "coordinates": { "longitude": -1.936283, "latitude": 30.077977 },
+      "address": "2657 Avenue de la Gendarmerie (Kacyiru)"
+    },
+    {
+      "name": "Ugandan High Commission Kigali",
+      "coordinates": { "longitude": -1.939445, "latitude": 30.087117 },
+      "address": "Route 75, Kacyiru via MINAGRI, KG 569 Street"
+    },
+    {
+      "name": "Embassy of Japan",
+      "coordinates": { "longitude": -1.944401, "latitude": 30.088183 },
+      "address": "35 KG 7 Ave, Kigali"
+    },
+    {
+      "name": "Tanzanian High Commission",
+      "coordinates": { "longitude": -1.948713, "latitude": 30.103452 },
+      "address": "KG 9 Ave, Kigali, Tanzanian High Commission"
+    },
+    {
+      "name": "Embassy of Morocco",
+      "coordinates": { "longitude": -1.932234, "latitude": 30.096648 },
+      "address": "70 KG 13 Ave, Kigali"
+    },
+    {
+      "name": "Embassy of Sudan",
+      "coordinates": { "longitude": -1.926133, "latitude": 30.099729 },
+      "address": "KG 9 Ave, Kigali, Embassy of Sudan"
+    },
+    {
+      "name": "Embassy of the Republic of Korea",
+      "coordinates": { "longitude": -1.934928, "latitude": 30.101056 },
+      "address": "34 KG 13 Ave, Kigali"
+    },
+    {
+      "name": "Nigerian High Commission",
+      "coordinates": { "longitude": -1.916487, "latitude": 30.092149 },
+      "address": "1 KG 418 St, Kigali"
+    },
+    {
+      "name": "Embassy of the Netherlands",
+      "coordinates": { "longitude": -1.947141, "latitude": 30.092509 },
+      "address": "2 KG 692 St, Kigali"
+    },
+    {
+      "name": "Embassy of Turkey",
+      "coordinates": { "longitude": -1.951945, "latitude": 30.082896 },
+      "address": "KG 2 Ave, Kigali"
+    },
+    {
+      "name": "Embassy of Germany",
+      "coordinates": { "longitude": -1.944311, "latitude": 30.064185 },
+      "address": "5 KN 27 St, Kigali"
+    },
+    {
+      "name": "Embassy of France",
+      "coordinates": { "longitude": -1.946541, "latitude": 30.067103 },
+      "address": "3 KN 33 St, Kigali"
+    },
+    {
+      "name": "Embassy of Burundi",
+      "coordinates": { "longitude": -1.94084, "latitude": 30.086591 },
+      "address": "KG 7 Ave, Kigali, Embassy of Burundi"
+    },
+    {
+      "name": "Embassy of Egypt",
+      "coordinates": { "longitude": -1.941934, "latitude": 30.087106 },
+      "address": "KG 7 Ave, Kigali, Embassy of Egypt"
+    },
+    {
+      "name": "Office of the Canadian High Commission",
+      "coordinates": { "longitude": -1.952188, "latitude": 30.073158 },
+      "address": "KN 16 Ave, Kigali, Office of the Canadian High Commission"
+    },
+    {
+      "name": "Embassy of the Democratic Republic of Congo",
+      "coordinates": { "longitude": -1.951716, "latitude": 30.072719 },
+      "address": "KN 16 Ave, Kigali"
+    },
+    {
+      "name": "Embassy of China",
+      "coordinates": { "longitude": -1.95378, "latitude": 30.061434 },
+      "address": "KN 3 Ave, Kigali"
+    },
+    {
+      "name": "Consulate General of Switzerland",
+      "coordinates": { "longitude": -1.953148, "latitude": 30.06167 },
+      "address": "KN 65 St, Kigali"
+    },
+    {
+      "name": "Embassy of Russia",
+      "coordinates": { "longitude": -1.953857, "latitude": 30.063402 },
+      "address": "KN 67 St, Kigali, Embassy of Russia"
+    },
+    {
+      "name": "Embassy of Ethiopia",
+      "coordinates": { "longitude": -1.926367, "latitude": 30.095407 },
+      "address": "Embassy of Ethiopia, Kigali"
+    },
+    {
+      "name": "Kenyan High Commission",
+      "coordinates": { "longitude": -1.944582, "latitude": 30.090014 },
+      "address": "KG 7 Ave, Kenyan High Commission, Kigali"
+    },
+    {
+      "name": "Embassy of Libya",
+      "coordinates": { "longitude": -1.941073, "latitude": 30.08624 },
+      "address": "KG 7 Ave, Kigali, Embassy of Libya"
+    },
+    {
+      "name": "British High Commission",
+      "coordinates": { "longitude": -1.946906, "latitude": 30.091886 },
+      "address": "KG 7 Ave, British High Commission, Kigali"
+    },
+    {
+      "name": "Embassy of Sweden",
+      "coordinates": { "longitude": -1.946434, "latitude": 30.09139 },
+      "address": "KG 7 Ave, Embassy of Sweden, Kigali"
+    },
+    {
+      "name": "South African High Commission",
+      "coordinates": { "longitude": -1.940326, "latitude": 30.085361 },
+      "address": "KG 7 Ave, South African High Commission, Kigali"
+    }
+  ]
+}

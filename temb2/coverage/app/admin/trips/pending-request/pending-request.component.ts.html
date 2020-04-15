@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/trips/pending-request/pending-request.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/trips/pending-request</a> pending-request.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">98% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>49/50</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.68% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>14/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.73% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { MatDialog, MatDialogRef } from '@angular/material';
+&nbsp;
+import { TripRequestService } from '../../__services__/trip-request.service';
+import { TripRequest } from '../../../shared/models/trip-request.model';
+import { ITEMS_PER_PAGE } from '../../../app.constants';
+import { TripApproveDeclineModalComponent } from '../trip-approve-decline-modal/trip-approve-decline-modal.component';
+import { AppEventService } from 'src/app/shared/app-events.service';
+&nbsp;
+@Component({
+  selector: 'app-pending-request',
+  template: require('./pending-request.component.html'),
+  styles: [],
+})
+export class PendingRequestComponent implements OnInit, OnDestroy {
+  tripRequests: TripRequest[] = [];
+  error: any;
+  routeData: Subscription;
+  success: any;
+  page: number;
+  previousPage: any;
+  pageSize: number;
+  totalItems: number;
+  private approvalDeclineDialog: MatDialogRef&lt;TripApproveDeclineModalComponent, any&gt;;
+&nbsp;
+  constructor(
+    private tripRequestService: TripRequestService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private activatedRoute: ActivatedRoute<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public dialog: MatDialog<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private appEventService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+  ) {
+    this.pageSize = ITEMS_PER_PAGE;
+    this.page = 1;
+    this.routeData = this.activatedRoute.data.subscribe((data) =&gt; {
+      const { pagingParams } = data;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (pagingParams) {
+        this.page = pagingParams.page;
+        this.previousPage = pagingParams.page;
+      }
+    });
+  }
+&nbsp;
+  loadAll() {
+    const { page, pageSize: size } = this;
+    this.tripRequestService.query({ page, size, status: 'Approved' }).subscribe(tripData =&gt; {
+      this.tripRequests = tripData.trips;
+      this.totalItems = tripData.pageInfo.totalResults;
+      this.appEventService.broadcast({ name: 'updateHeaderTitle', content: { badgeSize: this.totalItems } });
+    });
+  }
+&nbsp;
+  ngOnInit() {
+    this.loadAll();
+    this.routeData = this.appEventService
+      .subscribe('reInitializeTripRequest', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.loadAll();</span>
+      });
+  }
+&nbsp;
+  confirm(tripRequest): void {
+    this.openDialogModal(tripRequest);
+  }
+&nbsp;
+  decline(tripRequest): void {
+    this.openDialogModal(tripRequest, true);
+  }
+&nbsp;
+  private openDialogModal(tripRequest, decline?: boolean) {
+    const data = {
+      status: (decline) ? 1 : 0,
+      requesterFirstName: tripRequest.requester.name,
+      tripId: tripRequest.id
+    };
+    this.approvalDeclineDialog = this.dialog.open(TripApproveDeclineModalComponent, {
+      width: '592px',
+      maxHeight: '600px',
+      backdropClass: 'modal-backdrop',
+      panelClass: 'route-decline-modal-panel-class',
+      data
+    });
+  }
+&nbsp;
+  ngOnDestroy(): void {
+    this.routeData.unsubscribe();
+  }
+&nbsp;
+  updatePage(page) {
+    this.page = page;
+    this.loadAll();
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

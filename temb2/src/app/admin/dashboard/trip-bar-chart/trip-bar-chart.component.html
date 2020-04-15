@@ -1,0 +1,14 @@
+<div class="bar-chart">
+      <div class="title">{{ title }}</div>
+      <canvas baseChart
+        width="700"
+        height="280"
+        [datasets]="data"
+        [labels]="dept"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [colors]="chartColors"
+        [chartType]="barChartType">
+      </canvas>
+</div>

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/auth/__services__/auth.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/auth/__services__</a> auth.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">94.03% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>63/67</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.57% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>24/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">93.65% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>59/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Observable, Subscription } from 'rxjs';
+import { MatDialog } from '@angular/material';
+&nbsp;
+import { environment } from 'src/environments/environment';
+import { IUser } from '../../shared/models/user.model';
+import { CookieService } from './ngx-cookie-service.service';
+import { ClockService } from './clock.service';
+import { AlertService } from '../../shared/alert.service';
+import { HomeBaseManager } from 'src/app/shared/homebase.manager';
+&nbsp;
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  static lastActiveTime: number;
+  authUrl = `${environment.tembeaBackEndUrl}/api/v1/auth/verify`;
+  andelaAuthServiceToken: string;
+  tembeaToken: string;
+  private currentUser: IUser;
+  isAuthenticated = false;
+  isAuthorized = true;
+  token: string;
+  clockSubscription: Subscription;
+  constructor(
+    private http: HttpClient<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public cookieService: CookieService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private clock: ClockService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private router: Router<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public toastr: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public dialog: MatDialog<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private readonly hbManager: HomeBaseManager<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+  ) {}
+&nbsp;
+  getCurrentUser(): IUser {
+    if (this.currentUser) {
+      return { ...this.currentUser };
+    }
+&nbsp;
+    return null;
+  }
+&nbsp;
+  setCurrentUser(user: IUser): void {
+    this.currentUser = { ...user };
+  }
+&nbsp;
+  initClock(): void {
+    this.clockSubscription = this.clock.getClock().subscribe(data =&gt; {
+      const elapsedTime = (data - AuthService.lastActiveTime) / (1000 * 60);
+      if (elapsedTime &gt;= 30) {
+        this.logout();
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/']);</span>
+      }
+    });
+  }
+&nbsp;
+  login(): Observable&lt;any&gt; {
+    const setHeaders: HttpHeaders = new HttpHeaders({
+      Authorization: this.andelaAuthServiceToken
+    });
+    return this.http.get&lt;any&gt;(this.authUrl, { headers: setHeaders });
+  }
+&nbsp;
+  logout(): void {
+    this.cookieService.delete('jwt_token', '/');
+    this.cookieService.delete('tembea_token', '/');
+    localStorage.removeItem('HOMEBASE_ID');
+    localStorage.removeItem('HOMEBASE_NAME');
+    this.isAuthenticated = false;
+    this.clockSubscription.unsubscribe();
+    this.dialog.closeAll();
+  }
+&nbsp;
+  authorizeUser(response: any) {
+    const { token, userInfo } = response;
+    this.isAuthorized = true;
+    this.isAuthenticated = true;
+    this.tembeaToken = token;
+    this.setCurrentUser(userInfo);
+    this.toastr.success('Login Successful');
+    this.cookieService.set('tembea_token', `${token}`, 0.125, '/' );
+    this.hbManager.storeHomebase(userInfo.locations[0]);
+    this.setupClock();
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  setAisToken(</span>token) {
+<span class="cstat-no" title="statement not covered" >    this.andelaAuthServiceToken = token || this.cookieService.get('jwt-token');</span>
+<span class="cstat-no" title="statement not covered" >    if (this.andelaAuthServiceToken) {</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
+    }
+  }
+&nbsp;
+  public setupClock(): void {
+    AuthService.lastActiveTime = Date.now();
+    this.initClock();
+  }
+&nbsp;
+  unAuthorizeUser() {
+    this.isAuthorized = false;
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

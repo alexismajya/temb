@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/shared/jwt-http.interceptor.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">app/shared</a> jwt-http.interceptor.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">82.76% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>24/29</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.22% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>15/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>3/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">80.77% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>21/26</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Inject, Injectable} from '@angular/core';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+import { Router } from '@angular/router';
+&nbsp;
+import { AuthService } from '../auth/__services__/auth.service';
+import { AlertService } from './alert.service';
+import { HomeBaseManager } from './homebase.manager';
+import { environment } from 'src/environments/environment';
+&nbsp;
+@Injectable()
+export class JwtHttpInterceptor implements HttpInterceptor {
+  constructor(
+    private authService: AuthService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private router: Router<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private toastr: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private hbManager: HomeBaseManager<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+  ) {}
+&nbsp;
+  intercept(request: HttpRequest&lt;any&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;any&gt;&gt; {
+    const { tembeaToken } = this.authService;
+    if (!request.url.includes('/auth/verify') &amp;&amp; tembeaToken) {
+      const homebaseid = this.hbManager.getHomebaseId();
+      const authReq = request.clone({ setHeaders: {
+        Authorization: tembeaToken, homebaseid , teamurl: environment.teamUrl} });
+&nbsp;
+      return next.handle(authReq).pipe(
+        catchError(<span class="fstat-no" title="function not covered" >(</span>error: HttpErrorResponse) =&gt; {
+<span class="cstat-no" title="statement not covered" >          if (error.status === 401) {</span>
+<span class="cstat-no" title="statement not covered" >            this.toastr.error('Unauthorized access');</span>
+          } else <span class="cstat-no" title="statement not covered" >if (error.status === 500) {</span>
+<span class="cstat-no" title="statement not covered" >            this.toastr.error('Something went wrong. Maybe try again?');</span>
+          }
+<span class="cstat-no" title="statement not covered" >          return throwError(error);</span>
+        })
+      );
+    }
+&nbsp;
+    return next.handle(request);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

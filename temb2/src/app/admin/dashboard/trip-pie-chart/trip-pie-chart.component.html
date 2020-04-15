@@ -1,0 +1,14 @@
+<div class="total-daily">
+  <mat-card class="card">
+    <mat-card-title class="title">{{ title }}</mat-card-title>
+    <canvas
+      baseChart
+      [datasets]="pieChartDatasets"
+      [labels]="pieChartLabels"
+      [chartType]="pieChartType"
+      [options]="pieChartoptions"
+      [colors]="pieChartColors"
+    >
+    </canvas>
+  </mat-card>
+</div>

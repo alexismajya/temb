@@ -1,0 +1,50 @@
+.pagination {
+    margin-bottom: 2rem;
+}
+
+mat-grid-list {
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+  }
+
+mat-grid-tile {
+    text-align: center;
+}
+
+.route-trips-table {
+    box-sizing: border-box;
+    border: 1px solid #F1F3F5;
+    border-radius: 0.4rem;
+    box-shadow: 0 7px 44px 0 rgba(0,0,0,0.04);
+}
+
+.trip-table-head {
+    color: #808FA3;
+    font-size: 0.875rem;
+    line-height: 18px;
+}
+
+.table-row-item {
+    font-size: 0.875rem;
+    line-height: 18px;
+    &:last-child {
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+    }
+}
+
+@media all and (max-width: 752px) {
+    .route-trips-table {
+        margin: 0 auto;
+        width: 700px;
+      }
+}
+
+.export-data {
+    margin-left: auto;
+}
+
+.mat-input-element {
+  padding: 1%;
+  border-bottom: 1px solid rgb(230, 228, 228);
+}

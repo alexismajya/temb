@@ -1,0 +1,96 @@
+<div class="edit-user-modal">
+    <div class="modal-header">
+      <button class="close-button button-hover" (click)="closeDialog()">
+        &#x2715;
+      </button>
+    </div>
+    <div class=form-container>
+      <form #editUserForm="ngForm" (ngSubmit)="editUser(editUserForm, data.email)">
+        <span class="modal-title">Edit User Records</span>
+
+        <div class="single-field">
+            <div class="field single">
+              <div class="input-group">
+                <label for="slackUrl">What's the slackUrl</label>
+                <input 
+                  [(ngModel)]="data.slackUrl" 
+                  id="slackUrl" 
+                  name="slackUrl"
+                  placeholder="slack" 
+                  type="string" 
+                  #slackUrl="ngModel" required />
+                  <div *ngIf="slackUrl.errors">
+                      <small class="text-danger" *ngIf="slackUrl.errors.required">User slackUrl is required</small>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="single-field">
+            <div class="field single">
+              <div class="input-group">
+                <label for="newEmail">What's the new  Email?</label>
+                <input 
+                  [(ngModel)]="data.newEmail" 
+                  id="newEmail" 
+                  name="newEmail"
+                  placeholder="Ex: alex.maj@andela.com" 
+                  type="newEmail" 
+                  pattern="[a-z0-9._%-]+@andela\.com"
+                  [class.is_invalid]="newEmail.invalid && newEmail.touched"
+                  #newEmail="ngModel" />
+                <div *ngIf="newEmail.errors && (newEmail.touched && newEmail.invalid)">
+                  <small class="text-danger" *ngIf="newEmail.errors.required">User New Email is required</small>
+                  <small class="text-danger" *ngIf="newEmail.errors.pattern">Please provide a valid new email</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-field">
+              <div class="field single">
+                <div class="input-group">
+                  <label for="newName">What's the new name?</label>
+                  <input 
+                    [(ngModel)]="data.newName" 
+                    id="newName" 
+                    name="newName"
+                    placeholder="newName" 
+                    type="string" 
+                    #newName="ngModel" />
+                </div>
+              </div>
+            </div>
+
+            <div class="single-field">
+                <div class="field single">
+                  <div class="input-group">
+                    <label for="newPhoneNo">What's the new Phone Number?</label>
+                    <input 
+                      [(ngModel)]="data.newPhoneNo" 
+                      id="newPhoneNo" 
+                      name="newPhoneNo"
+                      placeholder="newPhoneNo" 
+                      type="string"
+                      pattern="^\+[1-9]\d{6,14}$"
+                      [class.is_invalid]="newPhoneNo.invalid && newPhoneNo.touched"
+                      #newPhoneNo="ngModel" />
+                  </div>
+                  <div *ngIf="newPhoneNo.errors && (newPhoneNo.touched && newPhoneNo.invalid)">
+                    <small class="text-danger" *ngIf="newPhoneNo.errors.required">User phone number is required</small>
+                    <small class="text-danger" *ngIf="newPhoneNo.errors.pattern">Please provide a valid phone number</small>
+                  </div>
+                </div>
+              </div>
+    
+  
+        <button
+          type="submit"
+          [disabled]="loading || editUserForm.invalid">
+          <i *ngIf="loading" class="fa fa-circle-o-notch fa-spin"></i>
+          <span>SAVE</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  

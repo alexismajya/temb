@@ -1,0 +1,23 @@
+.trip-ratings-container {
+  height: 117px;
+  width: 198px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+}
+
+.title {
+  height: 21px;
+  color: #333E44;
+  font-family: "DIN Pro";
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  margin-bottom: 35px;
+  text-align: left;
+}
+
+.mat-card {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+}

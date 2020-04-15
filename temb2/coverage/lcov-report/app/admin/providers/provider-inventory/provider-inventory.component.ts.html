@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/providers/provider-inventory/provider-inventory.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/providers/provider-inventory</a> provider-inventory.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">92.06% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>58/63</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.9% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>13/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>55/60</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Subject } from 'rxjs';
+import { ProviderService } from '../../__services__/providers.service';
+import { IProviderInventory } from '../../../shared/models/provider.model';
+import { SearchService } from '../../__services__/search.service';
+import { AppEventService } from 'src/app/shared/app-events.service';
+import { AlertService } from 'src/app/shared/alert.service';
+import { ITEMS_PER_PAGE } from 'src/app/app.constants';
+&nbsp;
+@Component({
+  selector: 'app-providers',
+  template: require('./provider-inventory.component.html'),
+  styles: [],
+  providers: [SearchService]
+})
+export class ProviderInventoryComponent implements OnInit, OnDestroy {
+  providers: IProviderInventory[] = [];
+  currentOptions = -1;
+  pageNo: number;
+  pageSize: number;
+  totalItems: number;
+  displayText: string;
+  isLoading: boolean;
+  searchTerm$ = new Subject&lt;string&gt;();
+  updateSubscription: any;
+  deleteSubscription: any;
+  updateListSubscription: { unsubscribe: any };
+&nbsp;
+  constructor(
+    public appEventsService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public alert: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public providerService: ProviderService<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  ) {
+    this.pageNo = 1;
+    this.pageSize = ITEMS_PER_PAGE;
+    this.isLoading = true;
+    this.getSearchResults(this.searchTerm$);
+  }
+&nbsp;
+  ngOnInit() {
+    this.getProvidersData();
+    this.updateSubscription = this.appEventsService.subscribe(
+      'updatedProvidersEvent',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getProvidersData()</span>
+    );
+    this.deleteSubscription = this.appEventsService.subscribe(
+      'providerDeletedEvent',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getProvidersData()</span>
+    );
+    this.updateListSubscription = this.appEventsService.subscribe(
+      'newProvider',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getProvidersData()</span>
+    );
+  }
+&nbsp;
+  getSearchResults = async searchItem =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (searchItem) {
+      this.isLoading = true;
+      this.providers = this.providers.filter(<span class="fstat-no" title="function not covered" >provider =&gt;</span>
+<span class="cstat-no" title="statement not covered" >        provider.name.toLowerCase().includes(searchItem.toLowerCase())</span>
+      );
+      this.isLoading = false;
+    } else {
+<span class="cstat-no" title="statement not covered" >      this.getProvidersData();</span>
+    }
+  }
+&nbsp;
+  getProvidersData = () =&gt; {
+    this.isLoading = true;
+    this.providerService.getProviders(this.pageSize, this.pageNo).subscribe(
+      providerData =&gt; {
+        const {
+          providers,
+          pageMeta: { totalResults }
+        } = providerData.data;
+        this.totalItems = totalResults;
+        this.providers = providers;
+        this.appEventsService.broadcast({
+          name: 'updateHeaderTitle',
+          content: { badgeSize: this.totalItems, actionButton: 'Add Provider' }
+        });
+        this.isLoading = false;
+      },
+      () =&gt; {
+        this.isLoading = false;
+        this.displayText = `Oops! We're having connection problems.`;
+      }
+    );
+    this.currentOptions = -1;
+  }
+&nbsp;
+  setPage(page: number): void {
+    this.pageNo = page;
+    this.getProvidersData();
+  }
+&nbsp;
+  showOptions(providerId) {
+    this.currentOptions = this.currentOptions === providerId ? <span class="branch-0 cbranch-no" title="branch not covered" >-1 </span>: providerId;
+  }
+&nbsp;
+  ngOnDestroy(): void {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.updateSubscription) {
+      this.updateSubscription.unsubscribe();
+    }
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.deleteSubscription) {
+      this.deleteSubscription.unsubscribe();
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (this.updateListSubscription) {
+        this.updateListSubscription.unsubscribe();
+      }
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/routes/routes-inventory/routes-inventory.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/routes/routes-inventory</a> routes-inventory.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">91.3% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>126/138</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.42% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>32/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>24/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.69% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>111/116</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, NgZone, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+&nbsp;
+import { RoutesInventoryService } from '../../__services__/routes-inventory.service';
+import { IDeleteRouteResponse } from 'src/app/shared/models/route-inventory.model';
+import { IRouteBatch, IEditRouteBatch } from '../../../shared/models/route-inventory.model';
+import { BaseTableComponent } from '../../base-table/base-table.component';
+import { AlertService } from '../../../shared/alert.service';
+import { ITEMS_PER_PAGE } from '../../../app.constants';
+import { MatDialog } from '@angular/material';
+import { ConfirmModalComponent } from '../../confirmation-dialog/confirmation-dialog.component';
+import RenameRouteBatch from './routes-inventory.helper';
+import { RoutesInventoryEditModalComponent } from './routes-inventory-edit-modal/routes-inventory-edit-modal.component';
+import { AppEventService } from 'src/app/shared/app-events.service';
+import { CreateRouteHelper } from '../create-route/create-route.helper';
+import { Subject, Subscription } from 'rxjs';
+import { SearchService } from '../../__services__/search.service';
+import { getDialogProps } from 'src/app/utils/generic-helpers';
+import { GoogleAnalyticsService } from '../../__services__/google-analytics.service';
+import { eventsModel, modelActions } from '../../../utils/analytics-helper';
+&nbsp;
+@Component({
+  selector: 'app-inventory',
+  template: require('./routes-inventory.component.html'),
+  styles: [],
+  providers: [SearchService]
+})
+export class RoutesInventoryComponent extends BaseTableComponent implements OnInit, OnDestroy {
+  routes: IRouteBatch[] = [];
+  pageNo: number;
+  pageSize: number;
+  sort: string;
+  totalItems: number;
+  lastRoute;
+  duplicate = true;
+  isLoading: boolean;
+  displayText = 'No Routes Found.';
+  searchTerm$ = new Subject&lt;string&gt;();
+  subscriptions = new Array&lt;Subscription&gt;();
+&nbsp;
+  constructor(
+    private searchService: SearchService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private analytics: GoogleAnalyticsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private alert: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private appEventsService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public dialog: MatDialog<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public createRouteHelper: CreateRouteHelper<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public router: Router<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public routeService: RoutesInventoryService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+  ) {
+    super(dialog);
+    this.pageNo = 1;
+    this.sort = 'name,asc,batch,asc';
+    this.rowType = 'routeBatch';
+    this.pageSize = ITEMS_PER_PAGE;
+    this.getSearchResults();
+  }
+&nbsp;
+  ngOnInit() {
+    this.getRoutesInventory();
+    const updateSubscription = this.appEventsService.subscribe('updateRouteInventory', <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.getRoutesInventory();</span>
+    });
+    this.subscriptions.push(updateSubscription);
+  }
+&nbsp;
+  getRoutesInventory = () =&gt; {
+    this.isLoading = true;
+    this.routeService.getRoutes(this.pageSize, this.pageNo, this.sort).subscribe(routesData =&gt; {
+        const { data: { routes, pageMeta } } = routesData;
+        this.routes = this.renameRouteBatches(routes);
+        this.totalItems = pageMeta.totalResults;
+        this.appEventsService.broadcast({ name: 'updateHeaderTitle', content: { badgeSize: pageMeta.totalResults } });
+        this.isLoading = false;
+      },
+<span class="fstat-no" title="function not covered" >      () =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.isLoading = false;</span>
+<span class="cstat-no" title="statement not covered" >        this.displayText = `Oops! We're having connection problems.`;</span>
+      });
+  }
+&nbsp;
+  getSearchResults = () =&gt; {
+    this.isLoading = true;
+    const {sort, pageSize, pageNo} = this;
+    const defaultTerm = `sort=${sort}&amp;size=${pageSize}&amp;page=${pageNo}`;
+    this.searchService.searchData(this.searchTerm$, 'routes', defaultTerm).subscribe(routesData =&gt; {
+        const { routes, pageMeta } = routesData;
+        this.routes = routes;
+        this.totalItems = pageMeta.totalResults;
+        this.appEventsService.broadcast({ name: 'updateHeaderTitle', content: { badgeSize: pageMeta.totalResults } });
+        this.isLoading = false;
+      },
+      () =&gt; {
+        this.isLoading = false;
+        this.displayText = `Oops! We're having connection problems.`;
+      });
+  }
+&nbsp;
+  renameRouteBatches(routes: IRouteBatch[]) {
+    let renamedBatches = routes;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (routes.length &gt; 0) {
+      const renameBatchesObject = new RenameRouteBatch(routes, this.lastRoute);
+      renamedBatches = renameBatchesObject.renameRouteBatches();
+      this.lastRoute = renamedBatches[renamedBatches.length - 1];
+    }
+    return renamedBatches;
+  }
+&nbsp;
+  copyRouteBatch(routeId: number) {
+    return this.sendRequestToServer(routeId);
+  }
+&nbsp;
+  showDialog(displayText: string, func: Function, value: any) {
+    const dialogRef = this.dialog.open(ConfirmModalComponent, getDialogProps(displayText));
+    const sub = dialogRef.componentInstance.executeFunction.subscribe(<span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>func.call(this, value))</span>;
+    this.subscriptions.push(sub);
+  }
+&nbsp;
+  showCopyConfirmModal(routeBatch: IRouteBatch) {
+    this.showDialog('copy this route', this.copyRouteBatch, routeBatch.id);
+  }
+&nbsp;
+  async sendRequestToServer(routeBatchId: number) {
+    try {
+      const response = await this.routeService.createRoute(routeBatchId, this.duplicate);
+      this.createRouteHelper.notifyUser([response.message], 'success');
+      this.analytics.sendEvent(eventsModel.Routes, modelActions.CREATE);
+      this.router.navigate(['/admin/routes/inventory']);
+      this.getRoutesInventory();
+    } catch (error) {
+      this.createRouteHelper.notifyUser([error.error.message || <span class="branch-1 cbranch-no" title="branch not covered" >'An error occurred.']</span>);
+    }
+  }
+&nbsp;
+  setPage(page: number): void {
+    this.pageNo = page;
+    this.getRoutesInventory();
+  }
+&nbsp;
+  changeRouteStatus(id: number, status: string) {
+    this.routeService.changeRouteStatus(id, { status })
+      .subscribe((response) =&gt; {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (response.success) {
+          this.updateRoutesData(id, status);
+          this.analytics.sendEvent(eventsModel.Routes, modelActions.UPDATE);
+        }
+      }, () =&gt; this.alert.error('Something went wrong! try again'));
+  }
+&nbsp;
+  updateRoutesData(id: number, status: string): void {
+    this.routes = this.routes.map((route) =&gt; {
+      if (route.id === id) {
+        route = { ...route, status };
+      }
+      return route;
+    });
+  }
+&nbsp;
+  async deleteRoute(routeBatchId: number) {
+    this.routeService.deleteRouteBatch(routeBatchId)
+      .subscribe((response: IDeleteRouteResponse) =&gt; {
+        const { success, message } = response;
+        if (success) {
+          this.alert.success(message);
+          this.analytics.sendEvent(eventsModel.Routes, modelActions.DELETE);
+          this.getRoutesInventory();
+        } else { this.alert.error(message); }
+      });
+  }
+&nbsp;
+  showDeleteModal(routeBatchId: number): void {
+    this.showDialog('delete this batch', this.deleteRoute, routeBatchId);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  editRoute(</span>routeBatch: IRouteBatch): void {
+    const { <span class="cstat-no" title="statement not covered" >id,</span> <span class="cstat-no" title="statement not covered" >status,</span> <span class="cstat-no" title="statement not covered" >takeOff,</span> <span class="cstat-no" title="statement not covered" >capacity,</span> <span class="cstat-no" title="statement not covered" >batch,</span> <span class="cstat-no" title="statement not covered" >inUse,</span> route: { <span class="cstat-no" title="statement not covered" >name}</span> } = routeBatch;
+<span class="cstat-no" title="statement not covered" >    this.dialog.open(RoutesInventoryEditModalComponent, {</span>
+      data: &lt;IEditRouteBatch&gt; {
+        id, status, takeOff, capacity, batch, inUse, name
+      }
+    });
+  }
+&nbsp;
+  ngOnDestroy() {
+    this.subscriptions.forEach((sub) =&gt; sub.unsubscribe());
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

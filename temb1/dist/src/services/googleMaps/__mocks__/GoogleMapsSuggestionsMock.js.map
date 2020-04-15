@@ -1,0 +1,1 @@
+{"version":3,"file":"GoogleMapsSuggestionsMock.js","sourceRoot":"","sources":["../../../../../src/services/googleMaps/__mocks__/GoogleMapsSuggestionsMock.js"],"names":[],"mappings":";;AAAA,kBAAe;IACb,KAAK,EAAE,MAAM;IACb,QAAQ,EAAE,SAAS;IACnB,MAAM,EAAE,OAAO;IACf,YAAY,EAAE,IAAI;IAClB,GAAG,EAAE,OAAO;IACZ,YAAY,EAAE,OAAO;CACtB,CAAC"}

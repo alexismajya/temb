@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <button class="close-button button-hover" (click)="closeDialog()">
+    &#x2715;
+  </button>
+</div>
+<div class="form-container">
+  <form #newUser="ngForm" (ngSubmit)="addUser(newUser.value)">
+    <span class="modal-title">Add New User</span>
+
+    <div class="single-field">
+      <div class="field single">
+        <div class="input-group">
+          <label for="email">User's Email</label>
+          <input
+            required
+            id="email"
+            name="email"
+            placeholder="john.doe@andela.com"
+            [(ngModel)]="userInfo.email"
+            type="email"
+            email
+            pattern="[a-zA-Z]+\.[a-zA-Z]+@andela\.com"
+            [class.is_invalid]="email.invalid && email.touched"
+            #email="ngModel"/>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)">
+            <small class="text-danger" *ngIf="email?.errors.required">email field is required</small>
+            <small class="text-danger" *ngIf="email?.errors.email">email is invalid</small>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="isLoading || newUser.invalid">
+      <i *ngIf="isLoading" class="fa fa-circle-o-notch fa-spin"></i>
+      &nbsp;
+      <span>Submit</span>
+    </button>
+  </form>
+</div>

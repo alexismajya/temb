@@ -1,0 +1,1 @@
+{"version":3,"file":"department.mock.js","sourceRoot":"","sources":["../../../../../../src/app/shared/__mocks__/department.mock.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,IAAM,UAAU,GAAG,CAAC;QACrB,EAAE,EAAE,CAAC;QACL,UAAU,EAAE,KAAK;QACjB,QAAQ,EAAE,UAAU;QACpB,IAAI,EAAE,KAAK;QACX,MAAM,EAAE,QAAQ;KACjB,CAAC,CAAC"}

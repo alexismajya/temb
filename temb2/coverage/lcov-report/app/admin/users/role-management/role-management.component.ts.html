@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/users/role-management/role-management.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/users/role-management</a> role-management.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.61% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>57/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">64% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>16/25</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">96.23% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>51/53</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, OnInit } from '@angular/core';
+import { AppEventService } from 'src/app/shared/app-events.service';
+import { ITEMS_PER_PAGE } from 'src/app/app.constants';
+import { RoleService } from '../../__services__/roles.service';
+import { AlertService } from 'src/app/shared/alert.service';
+import { MatDialog } from '@angular/material';
+import { ConfirmModalComponent } from '../../confirmation-dialog/confirmation-dialog.component';
+import { IUsers } from 'src/app/shared/models/roles.model';
+import { Subscription } from 'rxjs';
+@Component({
+  selector: 'app-role-management',
+  template: require('./role-management.component.html'),
+  styles: []
+})
+export class RoleManagementComponent implements OnInit {
+  isLoading: boolean;
+  totalItems: number;
+  userRoleSubscription: Subscription;
+  displayText: string;
+  pageNo: number;
+  pageSize: number;
+  users: IUsers[] = [];
+  filter: string;
+&nbsp;
+  constructor(
+    public roleService: RoleService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public dialog: MatDialog<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private alert: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public appEventsService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  ) {
+    this.pageNo = 1;
+    this.pageSize = ITEMS_PER_PAGE;
+    this.isLoading = true;
+  }
+&nbsp;
+  ngOnInit() {
+    this.getUsersData(this.filter);
+    this.userRoleSubscription = this.appEventsService.subscribe(
+      'userRoleEvent',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getUsersData(this.filter)</span>
+    );
+  }
+&nbsp;
+  getUsersData = filter =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!filter || <span class="branch-1 cbranch-no" title="branch not covered" >filter.length &gt; 0)</span> {
+      this.isLoading = true;
+      this.roleService.getUsers(filter).subscribe(
+        usersData =&gt; {
+          const { users } = usersData;
+          this.users = users;
+          let total = 0;
+          users.forEach(user =&gt; {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (user.roles.length &gt; 0) {
+              total += parseInt(user.roles.length, 10);
+            }
+          });
+          this.totalItems = total;
+          this.appEventsService.broadcast({
+            name: 'updateHeaderTitle',
+            content: {
+              badgeSize: this.totalItems,
+              actionButton: 'Assign User Role'
+            }
+          });
+          this.isLoading = false;
+        },
+        () =&gt; {
+          this.isLoading = false;
+          this.displayText = `Oops! We're having connection problems.`;
+          return;
+        }
+      );
+    }
+  }
+&nbsp;
+  setPage(page: number): void {
+    this.pageNo = page;
+    this.getUsersData(this.filter);
+  }
+&nbsp;
+  deleteUserRole(userRoleId: number) {
+    this.roleService.deleteUserRole(userRoleId).subscribe(
+      response =&gt; {
+        const { success, message } = response;
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (success) {
+          this.alert.success(message);
+          return this.getUsersData(this.filter);
+        }
+      },
+      error =&gt; {
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (error) {
+          return this.alert.error('😞Sorry! user role could not be deleted ');
+        }
+      }
+    );
+  }
+&nbsp;
+  showDeleteModal(userRoleId: number): void {
+    const dialogRef = this.dialog.open(ConfirmModalComponent, {
+      width: '592px',
+      data: {
+        confirmText: 'Yes',
+        displayText: 'delete this user role'
+      }
+    });
+    dialogRef.componentInstance.executeFunction.subscribe(<span class="fstat-no" title="function not covered" >() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.deleteUserRole(userRoleId);</span>
+    });
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

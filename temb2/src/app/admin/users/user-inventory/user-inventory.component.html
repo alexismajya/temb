@@ -1,0 +1,89 @@
+<div>
+  <div class="loader" *ngIf="isLoading === true"></div>
+  <div *ngIf="filter.length === 0">
+    <div class="buttons-wrapper flex">
+      <div class="search-section">
+        <app-search-input (keyup)="getUsersData($event.target.value)" ></app-search-input>
+      </div>
+    </div>
+    <div class="users-container">
+      <div class="users-table custom-table">
+        <mat-grid-list
+          role="list"
+          rowHeight="3:1"
+          cols="8"
+          class="table-header table-header-hover"
+        >
+          <mat-grid-tile tabindex="0" colspan="1">Name</mat-grid-tile>
+          <mat-grid-tile tabindex="1" colspan="1">SlackID</mat-grid-tile>
+          <mat-grid-tile tabindex="2" colspan="2">Email</mat-grid-tile>
+          <mat-grid-tile tabindex="3" colspan="1">Phone</mat-grid-tile>
+          <mat-grid-tile tabindex="4" colspan="1">Homebase</mat-grid-tile>
+          <mat-grid-tile tabindex="5" colspan="1">Role</mat-grid-tile>
+          <mat-grid-tile tabindex="6" colspan="1"
+            >Actions
+            <div class="actions-icon"></div>
+          </mat-grid-tile>
+        </mat-grid-list>
+
+        <ng-container>
+          <mat-grid-list
+            *ngFor="let user of users"
+            cols="8"
+            rowHeight="4:1"
+            class="table-row-item"
+          >
+            <div *ngIf="user.name" class="contentText">
+              <mat-grid-tile tabindex="0" colspan="1">
+                <div>{{ user.name }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="1" colspan="1">
+                <div>{{ user.slackId }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="2" colspan="2">
+                <div id="email">{{ user.email }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="3" colspan="1">
+                <div>{{ user.phoneNo }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="4" colspan="1">
+                <div>{{ user.homebase.name }}</div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="5" colspan="1">
+                <div *ngIf="user.roles.length > 0" class="users-align-cell">
+                  {{ user.roles[0].name }}
+                </div>
+              </mat-grid-tile>
+              <mat-grid-tile tabindex="6" colspan="1">
+                  <div class="flex">
+                    <button aria-label="Edit" class='edit-action-button' (click)="openEditUserModal(user)">
+                      <span class="edit-icon tooltip">
+                        <span class="show-on-right">Edit<i></i></span>
+                      </span>
+                    </button>
+                    <button aria-label="Delete" class='decline-action-button'>
+                      <span class="decline-icon tooltip" (click)="showDeleteModal(user.email)">
+                        <span class="show-on-left">Delete<i></i></span>
+                      </span>
+                    </button>
+                  </div>
+                </mat-grid-tile>
+            </div>
+          </mat-grid-list>
+        </ng-container>
+        <div *ngIf="users.length === 0 && !isLoading && filter.length === 0">
+          <app-empty-page [text]="displayText"></app-empty-page>
+          <div class="bottom-image"></div>
+        </div>
+      </div>
+      <div class="pagination">
+        <app-pagination
+          *ngIf="totalItems > pageSize"
+          [totalItems]="totalItems"
+          (pageChange)="setPage($event)"
+          [pageSize]="pageSize"
+        ></app-pagination>
+      </div>
+    </div>
+  </div>
+</div>

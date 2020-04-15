@@ -1,0 +1,32 @@
+<div>
+  <div class="loader" *ngIf="isLoading === true"></div>
+
+  <div class="buttons-wrapper flex">
+    <div class="search-section">
+      <app-search-input
+        (keyup)="getSearchResults($event.target.value)"
+      ></app-search-input>
+    </div>
+  </div>
+
+  <div class="cabs-grid-container xl-width">
+    <mat-grid-list cols="3" rowHeight="145px">
+      <mat-grid-tile *ngFor="let homebase of listOfHomebases, index as itemIndex">
+        <app-homebase-card
+          [homebaseId] ="homebase.id"
+          [homebaseName]="homebase.homebaseName"
+          [country]="homebase.country"
+          [currency]="homebase.currency"
+          [addressId]="homebase.addressId"
+          [channel]="homebase.channel"
+          [opsEmail]="homebase.opsEmail"
+          [travelEmail]="homebase.travelEmail"
+          [showMoreIcon]="true"
+          [hidden]="currentOptions !== itemIndex"
+          [showMoreIcon]="true"
+          (showOptions)="showOptions(itemIndex)"
+        ></app-homebase-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

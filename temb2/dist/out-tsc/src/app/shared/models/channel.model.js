@@ -1,0 +1,1 @@
+//# sourceMappingURL=channel.model.js.map

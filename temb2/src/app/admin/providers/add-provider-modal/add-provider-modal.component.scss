@@ -1,0 +1,9 @@
+mat-radio-button {
+  margin-top: 10px;
+}
+
+@media (min-width: 400px) {
+  mat-radio-button {
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,57 @@
+.mat-card {
+  height: 239px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+  width: 240px;
+}
+
+.mat-card-title {
+  height: 21px;
+  color: #333E44;
+  font-family: "DIN Pro";
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  margin-bottom: 23px;
+}
+
+.ratings {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.route-name{
+  height: 21px;
+  color: #333E44;
+  font-family: "DIN Pro";
+  font-weight: 500;
+  line-height: 21px;
+  margin-right: 5px;
+  margin-left: -15px;
+
+}
+
+.top-rated-route{
+  height: 21px;
+  color: #333E44;
+  font-family: "DIN Pro";
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  padding: 10px;
+}
+
+@media (min-width: 320px) and (max-width: 410px) {
+  .mat-card {
+    width: 210px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+}
+
+@media screen and (min-width: 1900px) {
+  .mat-card {
+    width: 300px;
+  }
+}

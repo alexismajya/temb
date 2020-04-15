@@ -1,0 +1,177 @@
+<div class="add-homebase-modal">
+    <div class="modal-header">
+      <button class="close-button button-hover" (click)="closeDialog()">
+        &#x2715;
+      </button>
+    </div>
+    <div class="form-container">
+      <form #addHomebaseForm="ngForm" (ngSubmit)="addHomebase()">
+        <span class="modal-title">Add A Homebase</span>
+        <div class="single-field">
+          <div class="field single">
+            <div class="input-group">
+              <label for="name">What's the homebase Name?</label>
+              <input
+                required
+                [(ngModel)]="homebase.homebaseName"
+                id="homebaseName"
+                name="homebaseName"
+                placeholder="Ex: Kigali"
+                type="text"
+                pattern="^[a-zA-Z\s]+$"
+                [class.is_invalid]="homebaseName.invalid && homebaseName.touched"
+                #homebaseName="ngModel"
+                />
+              <div *ngIf="homebaseName.errors && (homebaseName.touched && homebaseName.invalid)">
+                <small class="text-danger" *ngIf="homebaseName.errors.required">Homebase Name is required</small>
+                <small class="text-danger" *ngIf="homebaseName.errors.pattern">Please provide a valid Homebase Name</small>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="single-field">
+          <div class="field single">
+            <div class="input-group">
+              <label for="HomebaseAdress">What's the homebase Address</label>
+              <input
+                #addressNameFormInput
+                required
+                id="addressName"
+                name="addressName"
+                placeholder="Ex: Nairobi Center"
+                type="text"
+                [class.is_invalid]="addressName.invalid && addressName.touched"
+                #addressName="ngModel"
+                [(ngModel)]="homebase.address"
+                autocomplete="off"
+                (focusout)="handleAddressFill()" 
+                />
+                <div *ngIf="addressName.errors && (addressName.touched && addressName.invalid)">
+                  <small class="text-danger" *ngIf="addressName.errors.required">Address field is required</small>
+                </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="single-field"> 
+          <div class="field single">
+            <div class="input-group">
+              <label for="country">Selcet the homebase Country</label>
+              <mat-select
+                class="country-dropdown"
+                (selectionChange)="toggleCountry($event.value)"
+                [(ngModel)]="homebase.countryId"
+                placeholder="Select country"
+                name="countryId"
+                required>
+                <mat-option 
+                  *ngFor="let options of countryList"
+                  [value]="options.id">
+                  {{ options.name }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-field">
+          <div class="field single">
+            <div class="input-group">
+              <label for="SlackChannelId">Selcet the homebase Slack Channel</label>
+              <mat-select 
+                class="slack-dropdown" 
+                (selectionChange)="toggleSlackChannel($event.value)"
+                [(ngModel)]="homebase.channel" 
+                placeholder="Select channel"
+                name="channel" 
+                require>
+                <mat-option 
+                  *ngFor="let options of slackChannels" 
+                  [value]="options.id">
+                  {{ options.name }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-field">
+          <div class="field single">
+            <div class="input-group">
+              <label for="currency">What's the homebase Currency</label>
+              <input 
+              required 
+              [(ngModel)]="homebase.currency" 
+              id="currency" 
+              name="currency" 
+              placeholder="Ex: KSH" 
+              type="text"
+              maxlength="3"
+              pattern="^[a-zA-Z\s]+$"
+              [class.is_invalid]="currency.invalid && currency.touched"
+              #currency="ngModel" 
+              />
+              <div *ngIf="currency.errors && (currency.touched && currency.invalid)">
+                <small class="text-danger" *ngIf="currency.errors.required">Currency is required</small>
+                <small class="text-danger" *ngIf="currency.errors.pattern">Please provide a valid currency code</small> 
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-field">
+          <div class="field single">
+            <div class="input-group">
+              <label for="opsEmail">Ops Email</label>
+              <input 
+              required 
+              [(ngModel)]="homebase.opsEmail"
+              id="opsEmail" 
+              name="opsEmail" 
+              placeholder="Ex: opskigali.andela.com" 
+              type="email"
+              pattern="^[a-z0-9._%-]+@andela\.com"
+              [class.is_invalid]="opsEmail.invalid && opsEmail.touched"
+              #opsEmail="ngModel"
+              />
+              <div *ngIf="opsEmail.errors && (opsEmail.touched && opsEmail.invalid)">
+                <small class="text-danger" *ngIf="opsEmail.errors.required">Ops email is required</small>
+                <small class="text-danger" *ngIf="opsEmail.errors.pattern">Please provide a valid email</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-field">
+          <div class="field single">
+            <div class="input-group">
+              <label for="travelEmail">Travel Email</label> 
+              <input 
+              required 
+              [(ngModel)]="homebase.travelEmail"
+              id="travelEmail" 
+              name="travelEmail" 
+              placeholder="Ex: kigali.andela.com" 
+              type="email"
+              pattern="[a-z0-9._%-]+@andela\.com"
+              [class.is_invalid]="travelEmail.invalid && travelEmail.touched"
+              #travelEmail="ngModel"
+              />
+              <div *ngIf="travelEmail.errors && (travelEmail.touched && travelEmail.invalid)">
+                <small class="text-danger" *ngIf="travelEmail.errors.required">Travel Email is required</small>
+                <small class="text-danger" *ngIf="travelEmail.errors.pattern">Please provide a valid email</small>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <button type="submit" [disabled]="loading || addHomebaseForm.invalid">
+          <i *ngIf="loading" class="fa fa-circle-o-notch fa-spin"></i>
+          &nbsp;
+          <span>Submit</span>
+        </button>
+      </form>
+    </div>
+  </div>
+

@@ -1,0 +1,124 @@
+<div class="add-provider-modal">
+  <div class="modal-header">
+    <button class="close-button button-hover" (click)="closeDialog()">
+      &#x2715;
+    </button>
+  </div>
+  <div class="form-container">
+    <form #addForm="ngForm" (ngSubmit)="addProvider(addForm.value)">
+      <span class="modal-title">Add A Provider</span>
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="name">What's the Provider's Name?</label>
+            <input
+              required
+              [(ngModel)]="provider.name"
+              id="name"
+              name="name"
+              placeholder="WillGreen Cabs"
+              pattern="^[a-zA-Z\s]+$"
+              [class.is_invalid]="name.invalid && name.touched"
+              #name="ngModel"/>
+            <div *ngIf="name.errors && (name.touched && name.invalid)">
+              <small class="text-danger" *ngIf="name?.errors.required">Provider's Name is required</small>
+              <small class="text-danger" *ngIf="name?.errors.pattern">Please provide a valid Provider's Name</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="email">Provider User's Email</label>
+            <input
+              required
+              id="email"
+              name="email"
+              placeholder="john.doe@company.com"
+              [(ngModel)]="provider.email"
+              type="email"
+              email
+              pattern="\S+@\S+\.\S+"
+              [class.is_invalid]="email.invalid && email.touched"
+              #email="ngModel"/>
+              <div *ngIf="email.errors && (email.touched && email.invalid)">
+              <small class="text-danger" *ngIf="email?.errors.required">email field is required</small>
+              <small class="text-danger" *ngIf="email?.errors.email">email is invalid</small>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="phoneNo">Provider User's Phone Number</label>
+            <input
+              required
+              id="phoneNo"
+              name="phoneNo"
+              placeholder="+"
+              [(ngModel)]="provider.phoneNo"
+              type="phoneNo"
+              phoneNo
+              pattern="^\+[1-9]\d{6,14}$"
+              [class.is_invalid]="phoneNo.invalid && phoneNo.touched"
+              #phoneNo="ngModel"/>
+              <div *ngIf="phoneNo.errors && (phoneNo.touched && phoneNo.invalid)">
+              <small class="text-danger" *ngIf="phoneNo?.errors.required">Phone number field is required</small>
+              <small class="text-danger" *ngIf="phoneNo?.errors.phoneNo">Phone number is invalid</small>
+              <small class="text-danger" *ngIf="phoneNo?.errors.pattern">Please provide a valid phone number. example: +250700000000</small>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="notificationChannel">Receive notification via:</label>
+            <mat-select
+              class="channels-dropdown"
+              (selectionChange)="toggleNotificationChannel($event.value)"
+              [(ngModel)]="provider.notificationChannel" name="notificationChannel">
+              <mat-option *ngFor="let options of notificationChannels"
+                [value]="options.value"
+                [title]="options.key">
+                {{ options.key }}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="showSlackChannels"
+        class="single-field">
+        <div class="field single">
+          <div class="input-group">
+            <label for="channelId">Slack Channel ID</label>
+            <mat-select
+              class="channels-dropdown"
+              [(ngModel)]="provider.channelId" name="channelId"
+              (selectionChange)="toggleSlackChannelId($event.value)">
+              <mat-option *ngFor="let channel of slackChannels"
+                [value]="channel.id"
+                [title]="channel.description">
+                {{ channel.name }}
+              </mat-option>
+            </mat-select>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        [disabled]="loading || addForm.invalid">
+        <i *ngIf="loading" class="fa fa-circle-o-notch fa-spin"></i>
+        &nbsp;
+        <span>Submit</span>
+      </button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/routes/create-route/create-route.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/routes/create-route</a> create-route.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">85.71% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>90/105</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.74% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>33/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>15/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.54% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>85/96</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { AfterViewInit, Component, ElementRef, ViewChild, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HomeBaseService } from '../../../shared/homebase.service';
+import { LocationService } from '../../../shared/locations.service';
+import { GoogleMapsService } from '../../../shared/googlemaps.service';
+import { Location } from '../../../shared/location.model';
+import { CreateRouteHelper } from './create-route.helper';
+import { RoutesInventoryService } from '../../__services__/routes-inventory.service';
+import { NavMenuService } from '../../__services__/nav-menu.service';
+import { NgForm } from '@angular/forms';
+import { GoogleAnalyticsService } from '../../__services__/google-analytics.service';
+import { eventsModel, modelActions } from '../../../utils/analytics-helper';
+&nbsp;
+class RouteModel {
+  constructor(public routeName?: string,
+    public takeOffTime?: string,
+    public capacity?: number,
+    public marker?: string,
+    public provider?: any,
+    public destinationInputField?: string) { }
+&nbsp;
+}
+&nbsp;
+@Component({
+  selector: 'app-create',
+  template: require('./create-route.component.html'),
+  styles: []
+})
+export class CreateRouteComponent implements AfterViewInit, OnInit {
+  lat: number;
+  lng: number;
+  zoom = 14;
+  destinationIsDojo = true;
+  origin = { lat: this.lat, lng: this.lng };
+  destination: Location = { lat: this.lat, lng: this.lng };
+  destinationCoordinates: Location;
+  providers: any;
+  providerName: string;
+  selectedProvider: string;
+  model: RouteModel;
+  auto = null;
+&nbsp;
+  @ViewChild('createRouteForm') createRouteForm: NgForm<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+  @ViewChild('destinationFormInput') destinationInputElement: ElementRef<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+&nbsp;
+  mouseoverCreateButton;
+  constructor(
+    public googleMapsService: GoogleMapsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public homebaseService: HomeBaseService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public locationService: LocationService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private routeService: RoutesInventoryService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public createRouteHelper: CreateRouteHelper<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private router: Router<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private navMenuService: NavMenuService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private analytics: GoogleAnalyticsService<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+&nbsp;
+  ) {
+    this.model = new RouteModel();
+    this.model.capacity = 1;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async ngOnInit() {</span>
+    const <span class="cstat-no" title="statement not covered" >locationId = <span class="cstat-no" title="statement not covered" >await this.getHomebaseLocationId(localStorage.getItem('HOMEBASE_NAME'));</span></span>
+    const <span class="cstat-no" title="statement not covered" >location = <span class="cstat-no" title="statement not covered" >await this.getLocation(locationId);</span></span>
+    const { <span class="cstat-no" title="statement not covered" >latitude, longitude } = location;</span>
+<span class="cstat-no" title="statement not covered" >    this.lat = latitude;</span>
+<span class="cstat-no" title="statement not covered" >    this.lng = longitude;</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async getHomebaseLocationId (</span>homebaseName) {
+    const <span class="cstat-no" title="statement not covered" >response = <span class="cstat-no" title="statement not covered" >await this.homebaseService.getByName(homebaseName).toPromise();</span></span>
+    const { <span class="cstat-no" title="statement not covered" >locationId } = response.homebase[0];</span>
+<span class="cstat-no" title="statement not covered" >    return locationId;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  async getLocation (</span>id) {
+    const <span class="cstat-no" title="statement not covered" >response = <span class="cstat-no" title="statement not covered" >await this.locationService.getById(id).toPromise();</span></span>
+    const { <span class="cstat-no" title="statement not covered" >location } = response;</span>
+<span class="cstat-no" title="statement not covered" >    return location;</span>
+  }
+&nbsp;
+  ngAfterViewInit() {
+    this.googleMapsService
+      .loadGoogleMaps(this.destinationInputElement.nativeElement);
+  }
+&nbsp;
+  getSelected(provider) {
+    this.selectedProvider = provider;
+  }
+&nbsp;
+  setAuto(event) {
+    this.auto = event;
+  }
+&nbsp;
+  async showRouteDirectionOnClick() {
+    try {
+      const addressInput = this.destinationInputElement.nativeElement.value;
+&nbsp;
+      const coordinates = await this.googleMapsService
+      .getLocationCoordinatesFromAddress(addressInput);
+      this.updateRouteDisplay(coordinates);
+&nbsp;
+    } catch (error) {
+      this.createRouteHelper.notifyUser(['Location not found']);
+    }
+  }
+&nbsp;
+  async updateDestinationFieldOnMarkerDrag(marker, $event) {
+&nbsp;
+    const locationAddress = await this.googleMapsService
+      .getLocationAddressFromCoordinates($event.coords);
+    this.model.destinationInputField = locationAddress;
+    this.updateRouteDisplay($event.coords);
+  }
+&nbsp;
+  clearDestinationCoordinates() {
+    this.destinationCoordinates = null;
+  }
+&nbsp;
+  updateRouteDisplay(coordinates) {
+    this.destination = coordinates; // update map marker
+    this.destinationCoordinates = coordinates;
+    this.toggleMapDisplay();
+  }
+&nbsp;
+  toggleMapDisplay() {
+    this.destinationIsDojo = true;
+    this.destinationIsDojo = false;
+  }
+  changeCapacityValue(methodToCall: string) {
+    this.model.capacity = this.createRouteHelper[methodToCall](this.model.capacity);
+  }
+&nbsp;
+  async createRoute() {
+    if (!this.destinationCoordinates) {
+      return this.createRouteHelper.notifyUser(
+        ['Click the search icon to confirm destination']
+      );
+    }
+    const routeRequest = this.createRouteHelper.createNewRouteRequestObject(
+      this.model, this.model.destinationInputField, this.destinationCoordinates, this.selectedProvider
+    );
+&nbsp;
+    const errors = this.createRouteHelper.validateFormEntries(routeRequest);
+    if (errors.length) {
+      return this.createRouteHelper.notifyUser(errors);
+    }
+    return this.sendRequestToServer(routeRequest);
+  }
+&nbsp;
+  async sendRequestToServer(data) {
+    try {
+      this.navMenuService.showProgress();
+      const response = await this.routeService.createRoute(data);
+      this.navMenuService.stopProgress();
+      this.createRouteHelper.notifyUser([response.message], 'success');
+      this.model = null;
+      this.analytics.sendEvent(eventsModel.Routes, modelActions.CREATE);
+      this.router.navigate(['/admin/routes/inventory']);
+    } catch (e) {
+      this.navMenuService.stopProgress();
+      this.createRouteHelper.notifyUser([e.error.message || 'An error occurred.']);
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div class="rider__card">
+  <div class="rider__image">
+    <img src="{{ rider.picture }}" alt="" />
+  </div>
+
+  <div class="rider__name">
+    <p>{{ rider.name | shortenText: 7 }}</p>
+  </div>
+
+  <div class="rider__route">
+    <p>{{ rider.routeName }}</p>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="flexbox-parent">
+  <div fxLayout="row wrap" fxLayoutAlign="center center" style="height: 60vh;">
+    <div
+    fxLayoutAlign="center"
+    fxFlex="100%">
+      <mat-icon
+        class="logo-verify"
+        svgIcon="combined-shape"
+        matListIcon
+      ></mat-icon>
+    </div>
+    <div *ngIf="loading">
+        <h2 class="md-display-1">Verifying account...</h2>
+        <div>
+          Wait! We are checking the information of your account.
+        </div>
+      </div>
+      <div *ngIf="!loading && verified" class="alert alert-success">
+        <h2 class="md-display-1">Verification</h2>
+        <div>
+          Your account has been successfully verified.
+        </div>
+      </div>
+      <div *ngIf="!loading && !verified" class="alert alert-danger">
+        <h2 class="md-display-1">Verification</h2>
+        <div>
+          Sorry, we could not verify your account right now.
+        </div>
+      </div>
+  </div>
+</div>

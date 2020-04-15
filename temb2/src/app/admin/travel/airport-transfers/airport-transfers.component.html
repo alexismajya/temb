@@ -1,0 +1,9 @@
+<mat-tab-group (selectedTabChange)='getSelectedTab($event)' animationDuration="0ms">
+    <mat-tab label="Confirmed">
+        <app-trip-itinerary [tripType]="'Airport Transfer'" [tripRequestType]="'confirmed'" (tripTotalEventEmitter)="tripsTotal($event)"></app-trip-itinerary>
+    </mat-tab>
+  
+    <mat-tab label="Pending">
+        <app-trip-itinerary [tripType]="'Airport Transfer'" [tripRequestType]="'pending'" (tripTotalEventEmitter)="tripsTotal($event)"></app-trip-itinerary>
+    </mat-tab>
+</mat-tab-group>

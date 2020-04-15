@@ -1,0 +1,60 @@
+.mat-card {
+    height: 167px;
+    width: 327px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 5px;
+    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.1);
+  }
+
+.mat-card-title {
+	height: 21px;
+	color: #333E44;
+	font-family: "DIN Pro";
+	font-size: 16px;
+    line-height: 21px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.mat-card-content {
+    font-family: "DIN Pro";
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0.88px;
+    color: #808FA3;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    p {
+        margin: 0 10px 0 0;
+        font-size: 16px;
+        font-family: "Arial Narrow";
+    }
+    ::ng-deep {
+        .stars-outer::before{
+            content: "\f005 \f005 \f005 \f005 \f005";
+        }
+        .stars-inner::before{
+            content: "\f005 \f005 \f005 \f005 \f005";
+        }
+    }
+}
+
+.total-count {
+    font-size: 36px;
+    height: 46px;
+    color: #808FA3;
+    letter-spacing: 1.5px;
+    line-height: 46px;
+    margin: 0 0 10px 0;
+}
+

@@ -1,0 +1,34 @@
+<div class="update-trip-provider-modal">
+  <div class="modal-header">
+    <button 
+      class="close-button button-hover" 
+      (click)="closeDialog()">
+      &#x2715;
+    </button>
+  </div>
+  <div>
+    <h2 mat-dialog-title class="modal-title">Change Trip Provider</h2>
+    <form (ngSubmit)="updateTripProvider()" [formGroup]="providerUpdateForm">
+      <div class="input-group addon">
+        <label for="providerUpdate">Choose a new provider</label>
+        <select
+          id="providerUpdate"
+          name="provider"
+          formControlName="provider">
+          <option
+            *ngFor="let provider of tripProviderDetails.providers"
+            [ngValue]="provider">
+            {{ provider.name }}
+          </option>
+        </select>
+      </div>
+      <div class="action-buttons">
+        <button type="submit" [disabled]="submitBtnSpinnerLoading">
+          <i *ngIf="submitBtnSpinnerLoading" class="fa fa-circle-o-notch fa-spin"></i>
+          &nbsp;
+          <span class="update-btn-text">Save Changes</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

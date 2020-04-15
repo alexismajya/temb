@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/header/header.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">app/admin/header</a> header.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.69% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>82/116</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.4% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>35/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>12/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.51% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>76/102</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { AddHomebaseComponent } from '../homebase/add-homebase/add-homebase.component';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavMenuService } from '../__services__/nav-menu.service';
+import { MatDialog } from '@angular/material';
+import { ConfirmModalComponent } from '../confirmation-dialog/confirmation-dialog.component';
+import { AuthService } from 'src/app/auth/__services__/auth.service';
+import { ActivatedRoute, NavigationEnd, Router, RouterEvent } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { Subscription } from 'rxjs';
+&nbsp;
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+import { IUser } from '../../shared/models/user.model';
+import { AppEventService } from '../../shared/app-events.service';
+import { AddCabsModalComponent } from '../cabs/add-cab-modal/add-cab-modal.component';
+import {AddProviderModalComponent} from '../providers/add-provider-modal/add-provider-modal.component';
+import { AddUserModalComponent } from '../users/add-user-modal/add-user-modal.component';
+import { DriverModalComponent } from '../providers/driver-modal/driver-modal.component';
+import { IHomeBase } from 'src/app/shared/models/homebase.model';
+import { HomeBaseManager } from 'src/app/shared/homebase.manager';
+import { UserRoleModalComponent } from '../users/user-role-modal/user-role-modal.component';
+&nbsp;
+@Component({
+  selector: 'app-header',
+  template: require('./header.component.html'),
+  styles: []
+})
+export class HeaderComponent implements OnInit, OnDestroy {
+  public headerTitle: string;
+  public tooltipTitle: string;
+  public badgeSize = 0;
+  public actionButton = '';
+  public providerId: number;
+  user: IUser;
+  updateHeaderSubscription: Subscription;
+  logoutModalSub: Subscription;
+  homebase: IHomeBase;
+  locations;
+  setHomebaseSub: Subscription;
+  constructor(
+    private navItem: NavMenuService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public dialog: MatDialog<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public auth: AuthService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private titleService: Title<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private router: Router<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private activatedRoute: ActivatedRoute<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private appEventService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private HbManager: HomeBaseManager<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+  ) {}
+&nbsp;
+  ngOnInit() {
+    this.user = this.auth.getCurrentUser();
+    this.locations = this.getLocations(this.user.locations);
+    this.homebase = this.HbManager.getHomeBase();
+    this.getHeaderTitleFromRouteData();
+    this.router.events.subscribe((event: RouterEvent) =&gt; {
+      if (event instanceof NavigationEnd) {
+        this.getHeaderTitleFromRouteData();
+      }
+    });
+    this.updateHeaderSubscription = this.appEventService.subscribe('updateHeaderTitle', <span class="fstat-no" title="function not covered" >(</span>data) =&gt; {
+      const { <span class="cstat-no" title="statement not covered" >content: { <span class="cstat-no" title="statement not covered" >headerTitle,</span> <span class="cstat-no" title="statement not covered" >badgeSize,</span> <span class="cstat-no" title="statement not covered" >actionButton,</span> <span class="cstat-no" title="statement not covered" >tooltipTitle,</span> <span class="cstat-no" title="statement not covered" >providerId } </span></span>} = data;
+<span class="cstat-no" title="statement not covered" >      this.headerTitle = headerTitle || this.headerTitle;</span>
+<span class="cstat-no" title="statement not covered" >      this.tooltipTitle = tooltipTitle;</span>
+<span class="cstat-no" title="statement not covered" >      this.badgeSize = badgeSize || 0;</span>
+<span class="cstat-no" title="statement not covered" >      this.providerId = providerId;</span>
+<span class="cstat-no" title="statement not covered" >      this.actionButton = actionButton || this.actionButton;</span>
+    });
+    this.logoutModalSub = this.appEventService.subscribe('SHOW_LOGOUT_MODAL', <span class="fstat-no" title="function not covered" >() =&gt; <span class="cstat-no" title="statement not covered" ></span>this.showLogoutModal.call(this))</span>;
+  }
+&nbsp;
+  private getHeaderTitleFromRouteData() {
+    let route = this.activatedRoute.firstChild;
+    if (!route) {
+      return;
+    }
+    while (route.firstChild) {
+<span class="cstat-no" title="statement not covered" >      route = route.firstChild;</span>
+    }
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (route.outlet === 'primary') {
+      route.data.subscribe(value =&gt; {
+        this.headerTitle = value['title'];
+        this.badgeSize = 0;
+        this.actionButton = '';
+        this.titleService.setTitle(`Tembea - ${this.headerTitle}`);
+      });
+    }
+  }
+&nbsp;
+  ngOnDestroy(): void {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.updateHeaderSubscription) {
+<span class="cstat-no" title="statement not covered" >      this.updateHeaderSubscription.unsubscribe();</span>
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.logoutModalSub) {
+<span class="cstat-no" title="statement not covered" >      this.logoutModalSub.unsubscribe();</span>
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.setHomebaseSub) {
+<span class="cstat-no" title="statement not covered" >      this.setHomebaseSub.unsubscribe();</span>
+    }
+  }
+&nbsp;
+  toggleSideNav = () =&gt; {
+    this.navItem.toggle();
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  logout() {</span>
+<span class="cstat-no" title="statement not covered" >    this.auth.logout();</span>
+<span class="cstat-no" title="statement not covered" >    this.router.navigate(['/']);</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  showLogoutModal() {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (this.user) {</span>
+      const firstName = <span class="cstat-no" title="statement not covered" >this.user.firstName;</span>
+      const dialogRef = <span class="cstat-no" title="statement not covered" >this.dialog.open(ConfirmModalComponent, {</span>
+        width: '592px',
+        backdropClass: 'modal-backdrop',
+        panelClass: 'small-modal-panel-class',
+        data: {
+          displayText: `logout, ${firstName}`,
+          confirmText: 'Logout'
+        }
+      });
+<span class="cstat-no" title="statement not covered" >      dialogRef.componentInstance.executeFunction.subscribe(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.logout();</span>
+      });
+    }
+  }
+  handleAction() {
+    const openModal = (Modal) =&gt; {
+      this.dialog.open(Modal, {
+        minHeight: '568px', width: '592px', panelClass: 'add-cab-modal-panel-class',
+        data: { providerId: this.providerId }});
+    };
+    switch (this.actionButton) {
+      case 'Add Provider':
+        this.dialog.open(AddProviderModalComponent, {
+          maxHeight: '568px', width: '620px', panelClass: 'add-cab-modal-panel-class', });
+        break;
+<span class="branch-1 cbranch-no" title="branch not covered" >      case 'Add User':</span>
+<span class="cstat-no" title="statement not covered" >        this.dialog.open(AddUserModalComponent, {</span>
+          maxHeight: '568px', width: '620px', panelClass: 'add-cab-modal-panel-class', });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+<span class="branch-2 cbranch-no" title="branch not covered" >      case 'Add Homebase':</span>
+<span class="cstat-no" title="statement not covered" >        this.dialog.open(AddHomebaseComponent, {</span>
+          maxHeight: '568px', width: '620px', panelClass: 'add-cab-modal-panel-class',
+        });
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 'Add a New Vehicle':
+        openModal(AddCabsModalComponent);
+        break;
+      case 'Add Driver':
+        openModal(DriverModalComponent);
+        break;
+         case 'Assign User Role':
+          this.dialog.open(UserRoleModalComponent, {
+          maxHeight: '500px', width: '620px', panelClass: 'add-cab-modal-panel-class', });
+        break;
+    }
+  }
+&nbsp;
+  getLocations(locationArray) {
+    const locations = locationArray.map((location) =&gt; location.name);
+    return Array.from(new Set(locations));
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >  changeHomebase(</span>event) {</span>
+<span class="cstat-no" title="statement not covered" >    this.HbManager.setHomebase(event.value);</span>
+<span class="cstat-no" title="statement not covered" >    this.setHomebaseSub = this.appEventService.subscribe('setHomebase', <span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+      const currentUrl = <span class="cstat-no" title="statement not covered" >this.activatedRoute['_routerState'].snapshot.url;</span>
+<span class="cstat-no" title="statement not covered" >      this.router.navigateByUrl('/', { skipLocationChange: true }).then(<span class="fstat-no" title="function not covered" >() =&gt; {</span></span>
+<span class="cstat-no" title="statement not covered" >        this.router.navigate([currentUrl]);</span>
+      });
+    }, true);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

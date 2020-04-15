@@ -1,0 +1,30 @@
+.bar-chart{
+  height: 146px;
+  width:550px;
+  position: relative;
+}
+
+
+.title {
+  height: 21px;
+  color: #333E44;
+  font-family: "DIN Pro";
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: normal;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.checked {
+  color: orange;
+}
+
+.toggleData{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/routes/route-approve-decline-modal/route-approve-decline-modal.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/routes/route-approve-decline-modal</a> route-approve-decline-modal.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>60/60</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">67.86% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>19/28</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>55/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Component, Inject, OnInit, ViewChild } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { NgForm } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/auth/__services__/auth.service';
+import { IRouteApprovalDeclineInfo, IRouteDetails } from '../../../shared/models/route-approve-decline-info.model';
+import { RouteRequestService } from '../../__services__/route-request.service';
+import { AppEventService } from '../../../shared/app-events.service';
+import { GoogleAnalyticsService } from '../../__services__/google-analytics.service';
+import { eventsModel, modelActions } from '../../../utils/analytics-helper';
+&nbsp;
+@Component({
+  template: require('./route-approve-decline-modal.component.html'),
+  styles: []
+})
+&nbsp;
+export class RouteApproveDeclineModalComponent implements OnInit {
+  public values: any;
+  public comment: string;
+  public routeName: string;
+  public takeOff: string;
+  public providerName: string;
+  public loading: boolean;
+  public disableOtherInput = false;
+  public selectedProviderOption: any;
+  public selectedProvider: any;
+  auto = null;
+  @ViewChild('approveForm') approveForm: NgForm<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+&nbsp;
+  constructor(
+    public dialogRef: MatDialogRef<span class="branch-1 cbranch-no" title="branch not covered" >&lt;RouteApproveDeclineModalComponent&gt;,</span>
+    public authService: AuthService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private routeService: RouteRequestService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private appEventService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    private analytics: GoogleAnalyticsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    @Inject(MAT_DIALOG_DATA) public data: <span class="branch-1 cbranch-no" title="branch not covered" >IRouteApprovalDeclineInfo<span class="branch-0 cbranch-no" title="branch not covered" >,</span></span>
+  ) {
+&nbsp;
+  }
+&nbsp;
+  ngOnInit() {
+    this.loading = false;
+  }
+&nbsp;
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
+&nbsp;
+  approve(values): void {
+    this.setLoading(true);
+    const { routeName, takeOff, comment } = values;
+    const routeDetails: IRouteDetails = { routeName, takeOff };
+    const { data: { routeRequestId } } = this;
+    delete this.selectedProvider.user.slackId;
+    this.handleAction(this.routeService.approveRouteRequest(routeRequestId, comment, routeDetails, this.selectedProvider));
+  }
+&nbsp;
+  decline(values): void {
+    this.setLoading(true);
+    const { data: { routeRequestId } } = this;
+    const { comment } = values;
+    this.handleAction(this.routeService.declineRequest(routeRequestId, comment));
+  }
+&nbsp;
+  handleAction(action: Observable&lt;any&gt;): void {
+    action.subscribe(() =&gt; {
+      this.closeDialog();
+      this.appEventService.broadcast({ name: 'updateRouteRequestStatus' });
+      this.analytics.sendEvent(eventsModel.RouteRequest, modelActions.UPDATE);
+    }, () =&gt; this.setLoading(false));
+  }
+&nbsp;
+  setLoading(value: boolean): void {
+    this.loading = value;
+  }
+&nbsp;
+  setAuto(event) {
+    this.auto = event;
+  }
+&nbsp;
+  clearRouteFields(event) {
+    const { value } = event.target;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (value === '') {
+      this.disableOtherInput = false;
+      this.approveForm.form.patchValue(this.selectedProviderOption);
+    }
+  }
+&nbsp;
+  clickedRouteProviders (event) {
+    this.selectedProvider = event;
+    this.disableOtherInput = true;
+    this.approveForm.form.patchValue(event);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/layouts/app-pagination/app-pagination.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/layouts/app-pagination</a> app-pagination.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.83% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>92/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.05% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>32/41</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>20/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.74% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>90/94</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170</td><td class="line-coverage quiet"><span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">55x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">55x</span>
+<span class="cline-any cline-yes">55x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">48x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-yes">95x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">521x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">47x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
+&nbsp;
+type Position = 'left' | 'right';
+type Direction = 'prev' | 'next' | 'prev-ellipse' | 'next-ellipse';
+&nbsp;
+@Component({
+  selector: 'app-pagination',
+  template: require('./app-pagination.component.html'),
+  styles: []
+})
+export class AppPaginationComponent implements OnInit, OnChanges {
+&nbsp;
+  private pTotalItems = null;
+  private pPageSize: number;
+&nbsp;
+  get pageSize(): number {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.pPageSize == null) {
+<span class="cstat-no" title="statement not covered" >      throw new Error('pageSize must be provided.');</span>
+    }
+    return this.pPageSize;
+  }
+&nbsp;
+  @Input()
+  set pageSize(value: number) {
+    this.pPageSize = value;
+  }
+&nbsp;
+  get totalItems() {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.pTotalItems == null) {
+<span class="cstat-no" title="statement not covered" >      throw new Error('totalItems must be provided.');</span>
+    }
+    return this.pTotalItems;
+  }
+&nbsp;
+  @Input()
+  set totalItems(page) {
+    this.pTotalItems = page;
+  }
+&nbsp;
+  @Input() position: Position = 'right';
+  @Input() page: number;
+  @Input() btnGroupSize = 3;
+  @Output() pageChange: EventEmitter<span class="branch-1 cbranch-no" title="branch not covered" >&lt;number&gt; = new EventEmitter();</span>
+&nbsp;
+  public totalPages: number;
+  public currPage: number;
+  public btnGroup: Array&lt;number&gt; = [];
+&nbsp;
+  ngOnInit() {
+    this.initPagination();
+  }
+&nbsp;
+  ngOnChanges(changes: SimpleChanges): void {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (changes.totalItems) {
+      this.initPagination();
+    }
+  }
+&nbsp;
+  initPagination() {
+    this.currPage = this.page || 1;
+    this.totalPages = Math.ceil(this.totalItems / this.pageSize) || <span class="branch-1 cbranch-no" title="branch not covered" >1;</span>
+    this.btnGroup = this.genBtnGroup(this.btnGroupSize, this.page, this.totalPages);
+  }
+&nbsp;
+  changePage(page: number, direction: Direction) {
+    const handles = {
+      'prev': this.goto,
+      'next': this.goto,
+      'prev-ellipse': this.gotoPrevBtnGroup,
+      'next-ellipse': this.gotoNextBtnGroup
+    };
+    const handle = handles[direction] || <span class="branch-1 cbranch-no" title="branch not covered" >this.updatePageInfo;</span>
+    handle(page, direction);
+  }
+&nbsp;
+  shouldHideBtn(direction) {
+    const btnGroup = [...this.btnGroup];
+    const first = btnGroup[0];
+    const last = btnGroup.pop();
+    const prevEl = this.btnGroup.includes(1) &amp;&amp; first === 1;
+    const nextEl = this.btnGroup.includes(this.totalPages) &amp;&amp; last === this.totalPages;
+&nbsp;
+    const show = {
+      'prev': this.currPage &lt;= 1 || this.btnGroup.includes(1),
+      'next': this.currPage &gt;= this.totalPages || this.btnGroup.includes(this.totalPages),
+      'prev-ellipse': prevEl,
+      'next-ellipse': nextEl,
+    };
+    return show[direction];
+  }
+&nbsp;
+  public genBtnGroup = (btnGroupSize, pageVal, totalPages) =&gt; {
+    const numArray = [...Array.from(Array(totalPages + 1).keys())];
+    const normalizePage = Math.min(pageVal, totalPages);
+    const normalizeBtnGroupSize = Math.min(btnGroupSize, totalPages);
+    let start = Math.max(numArray.indexOf(normalizePage), 1);
+    let end = start + normalizeBtnGroupSize;
+    if (end &gt; numArray.length) {
+      start -= (end - numArray.length);
+      end = start + normalizeBtnGroupSize;
+    }
+    return numArray.slice(start, end);
+  }
+&nbsp;
+  /* Private fields */
+&nbsp;
+  private updatePageInfo = (page) =&gt; {
+    const validPage = page &gt;= 1 &amp;&amp; page &lt;= this.totalPages;
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (validPage &amp;&amp; this.currPage !== page) {
+      this.currPage = page;
+      this.pageChange.emit(page);
+    }
+  }
+&nbsp;
+  private goto = (page, direction: Direction) =&gt; {
+    if (this.btnGroup.includes(page)) {
+      this.updatePageInfo(page);
+    } else {
+      const val = &lt;Direction&gt;`${direction}-ellipse`;
+      this.changePage(null, val);
+    }
+  }
+&nbsp;
+  private gotoNextBtnGroup = () =&gt; {
+    const validGroup = this.shouldHideBtn('next-ellipse');
+    if (validGroup) {
+      return;
+    }
+    this.btnGroup = this.calcNextBtnGroup(this.btnGroup, this.totalPages);
+    this.updatePageInfo(this.btnGroup[0]);
+  }
+&nbsp;
+  private gotoPrevBtnGroup = () =&gt; {
+    const validGroup = this.shouldHideBtn('prev-ellipse');
+    if (validGroup) {
+      return;
+    }
+    this.btnGroup = this.calcPrevBtnGroup(this.btnGroup);
+    const lastIndex = this.btnGroup.length - 1;
+    this.updatePageInfo(this.btnGroup[lastIndex]);
+  }
+&nbsp;
+  private calcPrevBtnGroup = (btnGroup: Array&lt;number&gt;) =&gt; {
+    const numberGrp = [...btnGroup];
+    const size = numberGrp.length;
+    const first = numberGrp[0];
+    let decrement = size;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (first - size &lt; 1) {
+<span class="cstat-no" title="statement not covered" >      decrement = first - 1;</span>
+    }
+    return numberGrp.map((val) =&gt; {
+      return val - decrement;
+    });
+  }
+&nbsp;
+  private calcNextBtnGroup = (btnGroup: Array&lt;number&gt;, totalPages: number) =&gt; {
+    const numberGrp = [...btnGroup];
+    const size = numberGrp.length;
+    const last = numberGrp[size - 1];
+    let increment = size;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (last &gt; totalPages - size) {
+<span class="cstat-no" title="statement not covered" >      increment = totalPages - last;</span>
+    }
+    return numberGrp.map((val) =&gt; {
+      return val + increment;
+    });
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

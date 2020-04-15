@@ -1,0 +1,86 @@
+.update-trip-provider-modal {
+  padding: 0.2em 0;
+  margin : auto 1.5em;
+
+  .modal-header {
+    .close-button {
+      color     : #808FA3;
+      border    : none;
+      float     : right;
+      box-sizing: border-box;
+      height    : 8.06px;
+      width     : 8.86px;
+      transform : scaleX(-1);
+    }
+  }
+
+  .modal-title {
+    font-weight   : 300;
+    color         : #39434D;
+    font-family   : "DIN Pro";
+    font-size     : 24px;
+    letter-spacing: -1.17px;
+    line-height   : 31px;
+  }
+
+  .modal-form-label {
+    height        : 17px;
+    width         : 168px;
+    color         : #7A8691;
+    font-family   : "DIN Pro";
+    font-size     : 13px;
+    letter-spacing: 0.12px;
+    line-height   : 17px;
+  }
+
+  .action-buttons {
+    button {
+      height          : 46px;
+      width           : 100%;
+      margin-top      : 1em;
+      border-radius   : 5px;
+      background-color: #3359DB;
+
+      &:disabled {
+        background-color: #80808060;
+        cursor          : not-allowed;
+      }
+
+      span {
+        height        : 21px;
+        width         : 245px;
+        color         : #FFFFFF;
+        font-family   : "DIN Pro";
+        font-size     : 16px;
+        letter-spacing: 0.8px;
+        line-height   : 21px;
+        text-align    : center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .input-group {
+    width: 100%;
+
+    &.addon {
+      select {
+        height          : 45px;
+        width: 100%;
+        background-color: white;
+        border          : 1px solid #E9EFF4;
+        border-radius   : 4px;
+        color           : #999;
+      }
+    }
+
+    label {
+      display      : block;
+      margin-bottom: 0.3em;
+    }
+  }
+
+  .provider-dropdown {
+    width: 100%;
+  }
+}

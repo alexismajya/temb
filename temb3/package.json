@@ -1,0 +1,72 @@
+{
+  "name": "tembea-scheduler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "tsc": "ts-node -r tsconfig-paths/register",
+    "build": "yarn run clean && yarn run build-server",
+    "build-server": "tsc -b tsconfig.build.json",
+    "start": "yarn tsc src/index.ts",
+    "serve": "DEBUG=log node dist/index.js",
+    "start:dev": "DEBUG=log nodemon",
+    "start:debug": "NODE_ENV=development DEBUG=log nodemon --config nodemon-debug.json",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "jest": "ts-node node_modules/jest/bin/jest.js",
+    "test": "yarn jest --no-cache  --detectOpenHandles --runInBand --forceExit",
+    "watch-test": "yarn run test -- --watchAll"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bull": "^3.10.2",
+    "@types/debug": "^4.1.5",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.1",
+    "@types/jest": "^24.0.18",
+    "@types/morgan": "^1.7.37",
+    "@types/redis": "^2.8.13",
+    "@types/redis-mock": "^0.17.0",
+    "@types/request": "^2.48.2",
+    "@types/supertest": "^2.0.8",
+    "@types/axios": "^0.14.0",
+    "@types/bull-arena": "^2.6.0",
+    "@types/hapi__joi": "^15.0.4",
+    "@types/ioredis": "^4.0.16",
+    "@types/jsonwebtoken": "^8.3.3",
+    "@types/swagger-jsdoc": "^3.0.2",
+    "@types/swagger-ui-express": "^3.0.1",
+    "@types/uuid": "^3.4.5",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.19.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "axios": "^0.19.0",
+    "bull": "^3.11.0",
+    "bull-arena": "^2.6.3",
+    "cron-parser": "^2.13.0",
+    "debug": "^4.1.1",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "husky-tslint-pre-commit": "^1.0.3",
+    "ioredis": "^4.14.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.1.0",
+    "ts-jest": "^24.0.2",
+    "tsconfig-paths": "^3.8.0",
+    "uuid": "^3.3.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "node node_modules/husky-tslint-pre-commit/pre-commit.js"
+    }
+  }
+}

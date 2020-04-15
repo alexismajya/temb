@@ -1,0 +1,94 @@
+<div>
+
+  <div *ngIf="!routeTrips.length && !isLoading">
+    <app-empty-page [text]="'No route records yet.'"></app-empty-page>
+    <div class="bottom-image"></div>
+  </div>
+  <div *ngIf="routeTrips.length > 0">
+    <div class="buttons-wrapper flex routes-table">
+    <div class="search-section">
+      <mat-form-field class="filter-input">
+        <input matInput placeholder="Filter" (keyup)="filterTableData($event.target.value)"/>
+      </mat-form-field>
+    </div>
+    <app-export-view [tableName]="'routeAnalysis'" class="export-data" [sort]="sort">
+    </app-export-view>
+    </div>
+  </div>
+  <div *ngIf="routeTrips.length > 0" class="route-trips-container">
+    <div class="route-trips-table custom-table">
+      <mat-grid-list cols="7" rowHeight="4:1" class="trip-table-head table-header-hover">
+        <mat-grid-tile>
+          <div class="trip-align-cell">Date</div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">Route Name</div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">Batch</div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">Time</div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">Vehicle</div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">Utilization</div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">Avg Rating</div>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <mat-grid-list *ngFor="let routeTrip of routeTrips" cols="7"
+        (click)="viewRowDescription(routeTrip)" rowHeight="4:1" class="table-row-item">
+        <mat-grid-tile>
+          <div class="time trip-align-cell">
+            <span>{{ routeTrip.batchUseDate | date:'dd-MM-yy'}}</span>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">
+            {{ routeTrip.batch.route.name }}
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="trip-align-cell">
+              {{ routeTrip.batch.batch }}
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="time trip-align-cell">
+              {{ routeTrip.batch.takeOff}}
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="trip-align-cell">
+            <span *ngIf="routeTrip.batch.cabDetails">
+              {{ routeTrip.batch.cabDetails.regNumber }}
+            </span>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="trip-align-cell">
+              {{ routeTrip.utilization || 'N/A' }}{{ routeTrip.utilization ? '%' : ''}}
+            </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+            <div class="trip-align-cell">
+              {{ routeTrip.averageRating || 'N/A' }}
+            </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <app-pagination *ngIf='totalItems > pageSize' [totalItems]="totalItems"
+      (pageChange)="setPage($event)"
+      [pageSize]="pageSize">
+    </app-pagination>
+  </div>
+
+</div>

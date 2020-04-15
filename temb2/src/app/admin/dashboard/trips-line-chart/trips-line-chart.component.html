@@ -1,0 +1,14 @@
+<div class="travel-trips">
+  <mat-card class="card">
+
+    <mat-card-title class="title">{{ title }}</mat-card-title>
+    <canvas baseChart width="730" height="262"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [colors]="chartColors"
+      [legend]="chartLegend"
+      [chartType]="chartType">
+    </canvas>
+  </mat-card>
+</div>

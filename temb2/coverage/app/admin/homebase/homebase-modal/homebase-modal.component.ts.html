@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/homebase/homebase-modal/homebase-modal.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/homebase/homebase-modal</a> homebase-modal.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>78/78</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.09% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>31/43</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>13/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>67/67</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { AppEventService } from './../../../shared/app-events.service';
+import { Component, OnInit, Inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { AlertService } from 'src/app/shared/alert.service';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
+import { GoogleMapsService } from '../../../shared/googlemaps.service';
+import { HomeBaseService } from '../../../shared/homebase.service';
+import { SlackService } from '../../__services__/slack.service';
+import { AddressService } from '../../__services__/address.service';
+import { CountryService } from '../../__services__/country.service';
+import { IChannel } from 'src/app/shared/models/channel.model';
+import { NgForm } from '@angular/forms';
+import { Location } from '../../../shared/location.model';
+import { ICountry } from 'src/app/shared/models/country.model';
+import { HomebaseHelper } from '../homebase-helper/homebase.helper';
+&nbsp;
+@Component({
+  selector: 'app-homebase-modal',
+  template: require('./homebase-modal.component.html'),
+  styles: []
+})
+export class HomebaseModalComponent implements OnInit, AfterViewInit {
+  loading = false;
+  lat: number;
+  lng: number;
+  slackChannels: IChannel[] = [];
+  countryList: ICountry[] = [];
+  locationCoordinates: Location = { lat: this.lat, lng: this.lng };
+  countryId: number;
+&nbsp;
+  @ViewChild('homebaseForm') homebaseForm: NgForm<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+  @ViewChild('addressNameFormInput') addressNameInputElement: ElementRef<span class="branch-1 cbranch-no" title="branch not covered" >;</span>
+&nbsp;
+  constructor(
+    public dialogRef: MatDialogRef<span class="branch-1 cbranch-no" title="branch not covered" >&lt;HomebaseModalComponent&gt;,</span>
+    @Inject( MAT_DIALOG_DATA ) public data: any,
+    public toastService: AlertService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public appEventService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public homebaseService: HomeBaseService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public slackService: SlackService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public googleMapsService: GoogleMapsService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public addressService: AddressService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public countryService: CountryService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public homebaseHelper: HomebaseHelper<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  ) { }
+&nbsp;
+  ngOnInit() {
+    this.loadDefaultData();
+    this.getAddress();
+  }
+&nbsp;
+  ngAfterViewInit() {
+    this.googleMapsService
+      .loadGoogleMaps(this.addressNameInputElement.nativeElement);
+  }
+&nbsp;
+  async loadDefaultData() {
+    this.slackChannels = await this.homebaseHelper.loadDefaultProps(this.slackService.getChannels(), 'data');
+    this.countryList = await this.homebaseHelper.loadDefaultProps(this.countryService.getCountries(), 'countries');
+    this.getCountryId();
+  }
+&nbsp;
+  getCountryId() {
+    const currentCountry = this.countryList.find(country =&gt; country.name === this.data.country);
+    this.countryId = currentCountry.id;
+    delete this.data.country;
+    this.data.countryId = this.countryId;
+  }
+&nbsp;
+  async getAddress() {
+    const response = await this.addressService.getAddressById(this.data.addressId).toPromise();
+    const { address, location: { latitude, longitude } } = response;
+    this.locationCoordinates = {
+      lat: latitude,
+      lng: longitude
+    };
+    this.data.address = address;
+  }
+&nbsp;
+  async getHomebaseCoordinates() {
+    try {
+      const addressInput = this.addressNameInputElement.nativeElement.value;
+      const coordinates = await this.googleMapsService
+        .getLocationCoordinatesFromAddress(addressInput);
+      this.locationCoordinates = coordinates;
+      this.data.address = addressInput;
+    } catch (error) {
+      this.toastService.error(error);
+    }
+  }
+&nbsp;
+  editHomebase(form: NgForm, id: number) {
+    this.loading = true;
+    const updateHomebaseData = this.homebaseHelper.formatNewhomebaseObject(form.value, this.locationCoordinates);
+    this.homebaseService.updateHomebase(updateHomebaseData, id).subscribe(response =&gt; {
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (response.success) {
+        this.toastService.success(response.message);
+        this.appEventService.broadcast({ name: 'updateHomebaseEvent' });
+        this.loading = false;
+        this.closeDialog();
+      }
+    }, error =&gt; {
+        this.loading = false;
+        this.toastService.error(error.error.message);
+    });
+  }
+&nbsp;
+  closeDialog(): void {
+    this.dialogRef.close();
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

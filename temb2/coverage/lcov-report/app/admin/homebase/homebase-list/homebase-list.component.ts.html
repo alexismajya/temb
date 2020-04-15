@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/admin/homebase/homebase-list/homebase-list.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">All files</a> / <a href="index.html">app/admin/homebase/homebase-list</a> homebase-list.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">87.04% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>47/54</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">63.64% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">86.27% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>44/51</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { HomeBaseService } from './../../../shared/homebase.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ITEMS_PER_PAGE } from 'src/app/app.constants';
+import { AppEventService } from 'src/app/shared/app-events.service';
+import SubscriptionHelper from 'src/app/utils/unsubscriptionHelper';
+&nbsp;
+@Component({
+  selector: 'app-homebase-list',
+  template: require('./homebase-list.component.html'),
+  styles: []
+})
+export class HomebaseListComponent implements OnInit, OnDestroy {
+  listOfHomebases: Array&lt;any&gt;;
+  isLoading: boolean;
+  pageNo: number;
+  pageSize: number;
+  totalItems: number;
+  displayText: string;
+  searchTerm$: string;
+  updateSubscription: any;
+  deleteSubscription: any;
+  updateListSubscription: { unsubscribe: any };
+  currentOptions = -1;
+&nbsp;
+  constructor(
+    private homebaseService: HomeBaseService<span class="branch-1 cbranch-no" title="branch not covered" >,</span>
+    public appEventsService: AppEventService<span class="branch-1 cbranch-no" title="branch not covered" ></span>
+  ) {
+    this.isLoading = true;
+    this.pageNo = 1;
+    this.pageSize = ITEMS_PER_PAGE;
+    this.isLoading = true;
+    this.displayText = 'No Homebase yet';
+    this.getSearchResults(this.searchTerm$);
+  }
+&nbsp;
+  ngOnInit() {
+    this.getListOfHomebases();
+    this.updateSubscription = this.appEventsService.subscribe(
+      'updateHomebaseEvent',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getListOfHomebases()</span>
+    );
+    this.deleteSubscription = this.appEventsService.subscribe(
+      'providerDeletedEvent',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getListOfHomebases()</span>
+    );
+    this.updateListSubscription = this.appEventsService.subscribe(
+      'newHomebase',
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" ></span>this.getListOfHomebases()</span>
+    );
+  }
+&nbsp;
+  getSearchResults = async searchItem =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (searchItem) {
+<span class="cstat-no" title="statement not covered" >      this.isLoading = true;</span>
+<span class="cstat-no" title="statement not covered" >      this.listOfHomebases = this.listOfHomebases.filter(<span class="fstat-no" title="function not covered" >homebase =&gt;</span></span>
+<span class="cstat-no" title="statement not covered" >        homebase.homebaseName.toLowerCase().includes(searchItem.toLowerCase())</span>
+      );
+<span class="cstat-no" title="statement not covered" >      this.isLoading = false;</span>
+    } else {
+      this.getListOfHomebases();
+    }
+  }
+&nbsp;
+  getListOfHomebases = () =&gt; {
+    this.isLoading = true;
+    this.homebaseService.getAllHomebases().subscribe(
+      (data: any) =&gt; {
+        const {
+          homebases,
+          pageMeta: { totalResults }
+        } = data;
+        this.totalItems = totalResults;
+        this.appEventsService.broadcast({
+          name: 'updateHeaderTitle',
+          content: { badgeSize: this.totalItems, actionButton: 'Add Homebase' }
+        });
+        this.listOfHomebases = homebases;
+        this.isLoading = false;
+      },
+      () =&gt; {
+        this.isLoading = false;
+        this.displayText = `Oops! We're having connection problems.`;
+      }
+    );
+    this.currentOptions = -1;
+  }
+&nbsp;
+  setPage(page: number): void {
+    this.pageNo = page;
+    this.getListOfHomebases();
+  }
+&nbsp;
+  showOptions(providerId) {
+    this.currentOptions = this.currentOptions === providerId ? <span class="branch-0 cbranch-no" title="branch not covered" >-1 </span>: providerId;
+  }
+&nbsp;
+  ngOnDestroy(): void {
+    SubscriptionHelper.unsubscribeHelper([
+      this.updateSubscription,
+      this.deleteSubscription,
+      this.updateListSubscription
+    ]);
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 13 2020 01:27:51 GMT+0200 (Central Africa Time)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<div *ngIf="rowType === 'Regular Trip'">
+  <div class="display-trip-modal">
+    <h2 mat-dialog-title class="display-modal-title">Trip Description</h2>
+    <mat-dialog-content>
+      <div class="display-trip-details">
+        <div class="trip-user-details">
+          <h3 class="rider-info">Rider Information</h3>
+          <hr />
+          <p><span class="bold-text">Department: </span>{{rowInfo.department.name}}</p>
+          <p><span class="bold-text">Requested By: </span> {{rowInfo.requester.name }} </p>
+          <p><span class="bold-text">Rider: </span> {{ rowInfo.rider?.name | convertNullValue: 'NA' }}</p>
+        </div>
+        <div class="trip-date">
+          <h3 class="trip-date-text">Provider Details</h3>
+          <hr />
+          <p><span class="bold-text">Name: </span> {{ rowInfo.provider?.name | convertNullValue: 'NA' | shortenName: { max: 15 } }}</p>
+          <p><span class="bold-text">Driver's Name: </span> {{ rowInfo.driver?.driverName | convertNullValue: 'NA' }}</p>
+          <p><span class="bold-text">Vehicle model: </span> {{ rowInfo.cab?.model | convertNullValue: 'NA' }}</p>
+          <p><span class="bold-text">Vehicle Number: </span> {{ rowInfo.cab?.regNumber | convertNullValue: 'NA' }}</p>
+        </div>
+
+      </div>
+      <div class="display-trip-details">
+        <div class="extended-trip-details">
+          <h3 class="trip-details-text">Trip Details</h3>
+          <hr />
+          <p><span class="bold-text">Pickup: </span> {{rowInfo.origin.address}}</p>
+          <p><span class="bold-text">Destination: </span> {{rowInfo.destination.address}}</p>
+          <p><span class="bold-text">Requested On: </span> {{ rowInfo.requestedOn | date:'dd-MM-yy' }}</p>
+          <p><span class="bold-text">Departing On: </span> {{ rowInfo.departureTime | date:'dd-MM-yy' }}</p>
+          <p *ngIf="!!rowInfo.distance"><span class="bold-text">Distance: </span> {{rowInfo.distance}}</p>
+        </div>
+        <div class="trip-status">
+          <h3 class="trip-status-text">Trip Status</h3>
+          <hr />
+          <p><span class="bold-text">Status: </span> {{rowInfo.tripStatus}}</p>
+          <p><span class="bold-text">Reason for Decline(Ops):
+          </span> {{ rowInfo?.operationsComment | convertNullValue: 'NA' }}</p>
+          <p><span class="bold-text">Reason for Decline(Manager):
+          </span> {{ rowInfo?.managerComment | convertNullValue: 'NA' }}</p>
+        </div>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions class="display-modal-action">
+      <button class="close" mat-button [mat-dialog-close]="true">{{closeText}}</button>
+    </mat-dialog-actions>
+    <ng-template #elseSpan>NA</ng-template>
+  </div>
+</div>
+
+<div *ngIf="rowType === 'routeBatch'">
+  <div class="display-trip-modal">
+      <h2 mat-dialog-title class="display-modal-title">Route Information</h2>
+      <mat-dialog-content>
+        <div class="display-trip-details" *ngIf="rowInfo.route.imageUrl">
+            <div class="trip-image">
+              <h3 class="trip-date-text">Route Image</h3>
+              <hr />
+              <img class="trip-image" src='{{rowInfo.route.imageUrl}}' alt="Italian Trulli">
+            </div>
+        </div>
+        <div class="display-trip-details">
+            <div class="route-details">
+            <h3 class="rider-info">Route Details</h3>
+            <hr />
+            <p><span class="bold-text">Name: </span> {{rowInfo.route.name}}</p>
+            <p><span class="bold-text">Destination: </span> {{rowInfo.route.destination.address}}</p>
+            <p><span class="bold-text">Location: </span>
+              {{rowInfo.homebase.name}},
+              {{rowInfo.homebase.country.name}}</p>
+          </div>
+          <div class="route-details">
+              <h3 class="trip-status-text">Batch Details</h3>
+              <hr />
+              <p><span class="bold-text">Batch: </span> {{rowInfo.batch }} </p>
+              <p><span class="bold-text">Take Off Time: </span> {{rowInfo.takeOff}}</p>
+              <p><span class="bold-text">Status: </span> {{rowInfo.status}}</p>
+              <p><span class="bold-text">Capacity: </span> {{rowInfo.capacity}}</p>
+              <p><span class="bold-text">Riders: </span> {{rowInfo.inUse }}</p>
+          </div>
+        </div>
+        <div class="display-trip-details">
+          <div class="trip-details">
+              <h3 class="trip-date-text">Vehicle Details</h3>
+              <hr />
+              <p><span class="bold-text">Reg Number: </span> {{ rowInfo.cabDetails?.regNumber | convertNullValue: 'NA' }}</p>
+              <p><span class="bold-text">Model: </span> {{ rowInfo.cabDetails?.model | customTitlecase | convertNullValue: 'NA' }}</p>
+          </div>
+          <div class="trip-details">
+            <h3 class="trip-date-text">Driver Details</h3>
+            <hr />
+            <p><span class="bold-text">Name: </span> {{ rowInfo.driver?.driverName | convertNullValue: 'NA' }}</p>
+            <p><span class="bold-text">ID Number: </span> {{ rowInfo.driver?.driverNumber | convertNullValue: 'NA' }}</p>
+            <p><span class="bold-text">Phone Number: </span> {{ rowInfo.driver?.driverPhoneNo | convertNullValue: 'NA' }}</p>
+            <p><span class="bold-text">Email: </span> {{ rowInfo.driver?.email | convertNullValue: 'NA' }}</p>
+          </div>
+        </div>
+      </mat-dialog-content>
+      <mat-dialog-actions class="display-modal-action">
+        <button class="close" mat-button [mat-dialog-close]="true">{{closeText}}</button>
+      </mat-dialog-actions>
+    </div>
+</div>
+
+<div *ngIf="rowType === 'routeRecord'">
+    <div class="display-trip-modal">
+      <h2 mat-dialog-title class="display-modal-title">Route Use Information</h2>
+      <mat-dialog-content>
+        <div class="display-trip-details" *ngIf="rowInfo.batch.route.imageUrl">
+            <div class="trip-image">
+              <h3 class="trip-date-text">Route Image</h3>
+              <hr />
+              <img class="trip-image" src='{{rowInfo.batch.route.imageUrl}}' alt="Italian Trulli">
+            </div>
+        </div>
+        <div class="display-trip-details">
+            <div class="route-details">
+            <h3 class="rider-info">Route Details</h3>
+            <hr />
+            <p><span class="bold-text">Name: </span> {{ rowInfo.batch.route.name }}</p>
+            <p><span class="bold-text">Destination: </span> {{ rowInfo.batch.route.destination.address }}</p>
+            <p><span class="bold-text">Location: </span> {{ rowInfo.batch.route.homebase.name }}</p>
+          </div>
+          <div class="route-details">
+              <h3 class="trip-status-text">Batch Details</h3>
+              <hr />
+              <p><span class="bold-text">Batch: </span> {{ rowInfo.batch.batch }} </p>
+              <p><span class="bold-text">Take Off Time: </span> {{ rowInfo.batch.takeOff }}</p>
+              <p><span class="bold-text">Status: </span> {{ rowInfo.batch.status }}</p>
+              <p><span class="bold-text">Capacity: </span> {{ rowInfo.batch.capacity }}</p>
+          </div>
+        </div>
+
+        <div class="display-trip-details">
+            <div class="utilization-details">
+                <h3 class="trip-date-text">Batch Usage Details</h3>
+                <hr />
+                <div class="utilization-section">
+                  <p class="utilization-item"><span class="bold-text">Date: </span> {{ rowInfo.batchUseDate }}</p>
+                  <p><span class="bold-text">Utilization: </span> {{ rowInfo.utilization }} %</p>
+                </div>
+                <div class="utilization-section">
+                    <p class="utilization-item"><span class="bold-text">Total Riders: </span> {{ rowInfo.batch.riders.length }}</p>
+                    <p><span class="bold-text">Average Rating: </span> {{ rowInfo.averageRating }}</p>
+                </div>
+                <div class="utilization-section">
+                  <p class="utilization-item"><span class="bold-text">Took trip: </span> {{ rowInfo.confirmedUsers }}</p>
+                  <p><span class="bold-text">Skipped trip: </span> {{ rowInfo.skippedUsers }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="display-trip-details">
+            <div class="trip-details">
+                <h3 class="trip-date-text">Vehicle Details</h3>
+                <hr />
+                <p><span class="bold-text">Reg Number: </span> {{ rowInfo.batch.cabDetails.regNumber }}</p>
+                <p><span class="bold-text">Model: </span> {{ rowInfo.batch.cabDetails.model | customTitlecase }}</p>
+            </div>
+            <div class="trip-details">
+              <h3 class="trip-date-text">Driver Details</h3>
+              <hr />
+              <p><span class="bold-text">Name: </span> {{ rowInfo.batch.driver?.driverName | convertNullValue: 'NA' }}</p>
+              <p><span class="bold-text">ID Number: </span> {{ rowInfo.batch.driver?.driverNumber | convertNullValue: 'NA' }}</p>
+              <p><span class="bold-text">Phone Number: </span> {{ rowInfo.batch.driver?.driverPhoneNo | convertNullValue: 'NA' }}</p>
+              <p><span class="bold-text">Email: </span> {{ rowInfo.batch.driver?.email | convertNullValue: 'NA' }}</p>
+          </div>
+        </div>
+      </mat-dialog-content>
+      <mat-dialog-actions class="display-modal-action">
+        <button class="close" mat-button [mat-dialog-close]="true">{{closeText}}</button>
+      </mat-dialog-actions>
+    </div>
+</div>
