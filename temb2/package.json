@@ -78,7 +78,7 @@
     "lint-staged": "^8.2.1",
     "ng-lint-staged": "^0.1.6",
     "ngx-cypress-builder": "^1.0.2",
-    "node-sass": "~4.10.0",
+    "node-sass": "~4.13.1",
     "ts-node": "~7.0.0",
     "tslint": "^5.17.0",
     "typescript": "~3.1.1"
