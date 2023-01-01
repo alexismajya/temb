@@ -61,7 +61,7 @@
     "swagger-jsdoc": "^3.4.0",
     "swagger-ui-express": "^4.1.0",
     "ts-jest": "^24.0.2",
-    "tsconfig-paths": "^3.8.0",
+    "tsconfig-paths": "^3.10.1",
     "uuid": "^3.3.3"
   },
   "husky": {
